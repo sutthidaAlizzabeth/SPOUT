@@ -3,8 +3,19 @@ using System.Collections;
 
 public class ChangeScene : MonoBehaviour {
 
-	// Use this for change scene
-	public void Change (string sceneName) {
-		Application.LoadLevel(sceneName);
+	public string sceneName;
+	private SpriteRenderer spriteRenderer;
+
+	//Use this for initialization
+	public void Start (){
+		spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
 	}
+
+	// Use this for change scene
+	public void Update () {
+		if(Input.GetMouseButtonDown(0)){
+			Application.LoadLevel(sceneName);
+		}
+	}
+
 }
