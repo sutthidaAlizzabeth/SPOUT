@@ -1,9 +1,0 @@
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/SpeechToText.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/System.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/System.Xml.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/Mono.Android.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/Java.Interop.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/System.Core.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/mscorlib.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/System.Runtime.Serialization.dll
-/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/assets/System.ServiceModel.Internals.dll
