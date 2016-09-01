@@ -12,7 +12,7 @@ public class recognition : MonoBehaviour {
 
 		AndroidJavaClass s = new AndroidJavaClass ("android.speech.RecognizerIntent");
 		AndroidJavaObject intent = new AndroidJavaObject ("android.content.Intent", s.GetStatic<string>("ACTION_RECOGNIZE_SPEECH"));
-
+		intent = intent.Call<AndroidJavaObject> ("putExtra", s.GetStatic<string> ("EXTRA_LANGUAGE_MODEL"));
 	}
 	
 	// Update is called once per frame

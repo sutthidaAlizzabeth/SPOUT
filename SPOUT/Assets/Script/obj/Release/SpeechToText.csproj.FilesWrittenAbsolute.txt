@@ -1,0 +1,13 @@
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/bin/Release/SpeechToText.dll.mdb
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/bin/Release/SpeechToText.dll
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/bin/Release/SpeechToText.SpeechToText.apk
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/android/bin/SpeechToText.SpeechToText.apk
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/res/layout/main.xml
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/res/values/strings.xml
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/res/drawable/icon.png
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/R.cs.flag
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/bin/Release/SpeechToText.SpeechToText-Signed.apk
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/uploadflags.txt
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/SpeechToText.dll
+/Users/Alizzabeth/Downloads/SpeechToText/SpeechToText/obj/Release/SpeechToText.dll.mdb
