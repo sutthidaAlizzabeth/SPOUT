@@ -5,23 +5,30 @@ using System.Collections;
 public class SpeechToText : MonoBehaviour {
 
 	public InputField field;
-	public Button microphone;
-	public Sprite btnImg;
+	public Button btnRecord;
+	public Sprite imgMicrophone;
+	public Sprite imgStop;
+	private bool isRecording;
 
 	// Use this for initialization
 	void Start () {
 		field.text = "Show Text Here!";
-		//microphone = gameObject.GetComponent<Button> ();
+		//set started value of isRecording;
+		isRecording = false;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+	//Use this when click microphone button
 	public void OnSpeech(string str){
+		//set text in InputField
 		field.text = str;
-		microphone.image.overrideSprite = btnImg;
-		//microphone.image.sprite = btnImg;
+
+		isRecording = !isRecording;
+		if (isRecording) {
+			//change source image of button to stop recording button
+			btnRecord.image.overrideSprite = imgStop;
+		} else {
+			//change source image of button to microphone button
+			btnRecord.image.overrideSprite = imgMicrophone;
+		}
 	}
 }
