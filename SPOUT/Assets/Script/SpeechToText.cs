@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Android.Content;
+using Android.Speech;
 
 public class SpeechToText : MonoBehaviour {
 
@@ -24,6 +26,8 @@ public class SpeechToText : MonoBehaviour {
 
 		isRecording = !isRecording;
 		if (isRecording) {
+			var voiceIntent = new Intent (RecognizerIntent.ActionRecognizeSpeech);
+
 			//change source image of button to stop recording button
 			btnRecord.image.overrideSprite = imgStop;
 		} else {
