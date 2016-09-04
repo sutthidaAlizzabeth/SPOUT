@@ -2,24 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/SpeechToText.cs">
     <Files>
-      <File FileName="Assets/Script/SpeechToText.cs" Line="13" Column="2" />
+      <File FileName="Assets/Script/SpeechToText.cs" Line="40" Column="62" />
       <File FileName="Assets/Script/GoBack.cs" Line="1" Column="1" />
       <File FileName="Assets/Script/ChangeScene.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="SPOUT" expanded="True">
-            <Node name="Assembly-CSharp" expanded="True">
-              <Node name="References" expanded="True" selected="True" />
-              <Node name="Script" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
