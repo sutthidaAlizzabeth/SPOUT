@@ -26,7 +26,9 @@ public class SpeechToText : MonoBehaviour {
 
 		isRecording = !isRecording;
 		if (isRecording) {
+			// create the intent and start the activity
 			var voiceIntent = new Intent (RecognizerIntent.ActionRecognizeSpeech);
+			voiceIntent.PutExtra (RecognizerIntent.ExtraLanguageModel, RecognizerIntent.LanguageModelFreeForm);
 
 			//change source image of button to stop recording button
 			btnRecord.image.overrideSprite = imgStop;
