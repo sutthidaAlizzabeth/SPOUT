@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/kn_category.unity
+- path: Assets/Scene/Untitled.unity
   isLoaded: 1
   isActive: 1

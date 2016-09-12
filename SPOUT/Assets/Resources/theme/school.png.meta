@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: 9a103c866653dce49a8f46d5388b09a1
+timeCreated: 1473574094
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: school_0
+    21300002: school_1
+    21300004: school_2
+    21300006: school_3
+    21300008: school_4
+    21300010: school_5
+    21300012: school_6
+    21300014: school_7
+    21300016: school_8
+    21300018: school_9
+    21300020: school_10
+    21300022: school_11
+    21300024: school_12
+    21300026: school_13
+    21300028: school_14
+    21300030: school_15
+    21300032: school_16
+    21300034: school_17
+    21300036: school_18
+    21300038: school_19
+    21300040: school_20
+    21300042: school_21
+    21300044: school_22
+    21300046: school_23
+    21300048: school_24
+    21300050: school_25
+    21300052: school_26
+    21300054: school_27
+    21300056: school_28
+    21300058: school_29
+    21300060: school_30
+    21300062: school_31
+    21300064: school_32
+    21300066: school_33
+    21300068: school_34
+    21300070: school_35
+    21300072: school_36
+    21300074: school_37
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: school_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 1200
+        height: 1442
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 10, z: 10, w: 10}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

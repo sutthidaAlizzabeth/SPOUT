@@ -1,0 +1,17 @@
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/obj/Debug/Assembly-CSharp.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/UnityEngine.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/UnityEditor.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Mono.Cecil.Mdb.dll
