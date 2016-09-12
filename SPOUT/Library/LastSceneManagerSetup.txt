@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene/Untitled.unity
+- path: Assets/Scene/game_vocab.unity
   isLoaded: 1
   isActive: 1
