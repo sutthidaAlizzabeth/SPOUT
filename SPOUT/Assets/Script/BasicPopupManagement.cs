@@ -12,4 +12,8 @@ public class BasicPopupManagement : MonoBehaviour {
 	public void ShowPopup () {
 		popupCanvas.enabled = true;
 	}
+
+	public void ClosePopup(){
+		popupCanvas.enabled = false;
+	}
 }
