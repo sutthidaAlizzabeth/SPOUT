@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 
@@ -18,7 +19,7 @@ public class GoBack : MonoBehaviour {
 				Application.Quit();
 			} else {
 				//load scene
-				Application.LoadLevel(sceneName);
+				SceneManager.LoadScene (sceneName);
 			}
 		}
 	}
