@@ -1,0 +1,1 @@
+var data = [{"event_id": null, "date": null, "score": null}]

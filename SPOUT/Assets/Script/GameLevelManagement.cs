@@ -1,18 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 
 public class GameLevelManagement : MonoBehaviour {
 
-	public Text topic;
+	private Text thm_name;
+	static public string level;
 
 	// Use this for initialization
 	void Start () {
-		topic.text = GameThemeManagement.theme;
+		//get 'thm_name' object (Text) in Unity (game_level scene)
+		thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
+		thm_name.text = GameThemeManagement.theme;
+	}
+
+	public void levelEasy(){
+		level = "easy";
+		goToVocab ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public void levelNormal(){
+		level = "normal";
+		goToVocab ();
+	}
+
+	public void levelHard(){
+		level = "hard";
+		goToVocab ();
+	}
+
+	private void goToVocab(){
+		SceneManager.LoadScene ("game_vocab");
 	}
 }
