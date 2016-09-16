@@ -8,8 +8,9 @@ using System.Collections.Generic;
 
 public class GameThemeManagement : MonoBehaviour {
 
-	Button btn_theme; //description object in Unity (game_theme scene)
-	Text description; //description object in Unity (game_theme scene)
+	private Button btn_theme;
+	private Text description;
+
 	//all theme objects
 	static public Dictionary<int,Theme> themeList = Theme.genThemeList ();
 	//choosed theme object
@@ -18,21 +19,20 @@ public class GameThemeManagement : MonoBehaviour {
 	// Use this for initialization
 	//this method was call first
 	void Start () {
-		//get btn_theme object in Unity (game_theme scene)
+		//get game objects from Unity (game_theme scene)
 		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
-		//description object in Unity (game_theme scene)
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
 
 		//set content of btn_theme and theme description
 		//at the first, use index 1 (first theme id)
-		setThemeButton (int.Parse(theme.getId()));
+		setThemeButton (int.Parse(theme.id));
 	}
 		
 	
 	// when touch btn_go button
 	public void go () {
 		//get theme id of current theme object
-		int index = int.Parse(theme.getId());
+		int index = int.Parse(theme.id);
 
 		//set the next index of list_img_theme
 		//if current index is the last index, then set index = 1 (return to the first image)
@@ -49,7 +49,7 @@ public class GameThemeManagement : MonoBehaviour {
 
 	public void back(){
 		//get theme id of current theme object
-		int index = int.Parse(theme.getId());
+		int index = int.Parse(theme.id);
 
 		//set the next index of list_img_theme
 		//if current index is the first index, then set index = the last index (return to the last image)
@@ -66,9 +66,9 @@ public class GameThemeManagement : MonoBehaviour {
 
 	private void setThemeButton(int index){
 		//set sprite (image) into btn_theme
-		btn_theme.image.overrideSprite = Resources.Load ("g_theme/" + themeList[index].getImage(), typeof(Sprite)) as Sprite;
+		btn_theme.image.overrideSprite = Resources.Load ("g_theme/" + themeList[index].image, typeof(Sprite)) as Sprite;
 		//set image name into "description"
-		description.text = themeList[index].getName();
+		description.text = themeList[index].name;
 		//prepare "theme" global variable for sending to other scenes
 		theme = themeList[index];
 	}

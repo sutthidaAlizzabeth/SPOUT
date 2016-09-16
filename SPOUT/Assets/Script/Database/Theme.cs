@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 
 
@@ -9,30 +7,6 @@ public class Theme{
 	public string id;
 	public string name;
 	public string image;
-
-	public void setId(string id){
-		this.id = id;
-	}
-
-	public string getId(){
-		return this.id;
-	}
-
-	public void setName(string name){
-		this.name = name;
-	}
-
-	public string getName(){
-		return this.name;
-	}
-
-	public void setImage(string image){
-		this.image = image;
-	}
-
-	public string getImage(){
-		return this.image;
-	}
 
 	static public Dictionary<int,Theme> genThemeList(){
 		//prepare variable
@@ -64,6 +38,8 @@ public class Theme{
 				themeList.Add(int.Parse(t.id),t);
 				json = json.Remove(0, num);
 			}
+
+			//check next string object
 			num = json.IndexOf("{");
 		}
 		while(num != -1);
