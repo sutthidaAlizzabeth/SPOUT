@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{499AA55D-9596-B496-5202-FF875B861F26}") = "SPOUT", "Assembly-CSharp.csproj", "{AD9FD157-CC8A-80AE-7854-861DCFA3CF92}"
 EndProject
+Project("{499AA55D-9596-B496-5202-FF875B861F26}") = "SPOUT", "Assembly-UnityScript.unityproj", "{84E81359-83B4-1153-538C-555C215E87F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{AD9FD157-CC8A-80AE-7854-861DCFA3CF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD9FD157-CC8A-80AE-7854-861DCFA3CF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD9FD157-CC8A-80AE-7854-861DCFA3CF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E81359-83B4-1153-538C-555C215E87F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E81359-83B4-1153-538C-555C215E87F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E81359-83B4-1153-538C-555C215E87F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E81359-83B4-1153-538C-555C215E87F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

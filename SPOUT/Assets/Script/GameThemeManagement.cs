@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using System.IO;
 using System.Collections;
 
 public class GameThemeManagement : MonoBehaviour {
@@ -74,12 +75,34 @@ public class GameThemeManagement : MonoBehaviour {
 	}
 
 	private void setThemeButton(int indexOfButton){
+		string[] obj = null;
+		using (StreamReader r = new StreamReader("Assets/Script/JSON/themes.js")){
+			string json = r.ReadToEnd ();
+			json = json.Remove(json.Length - 2,2).Remove (0, 12).Replace(" ", String.Empty);
+			bool find = true;
+			do{
+				if(json.IndexOf("{") != -1){
+					json.Remove(json.IndexOf("{"));
+				}
+				else if(json.IndexOf("}") != -1){
+					json.Remove(json.IndexOf("}"));
+				}
+				else{
+					find = false;
+				}
+			}
+			while(find);
+
+			obj = json.Split (',');
+		}
+
+
 		//load sprite (image) from Resource/g_theme
 		img_theme = Resources.Load ("g_theme/" + list_img_theme [indexOfButton], typeof(Sprite)) as Sprite;
 		//set sprite (image) into btn_theme
 		btn_theme.image.overrideSprite = img_theme;
 		//set image name into "description"
-		description.text = list_img_theme [indexOfButton].Substring(4);
+		description.text = obj[0]; //list_img_theme [indexOfButton].Substring(4);
 		//prepare "theme" global variable for sending to other scenes
 		theme = getDescriptionName ();
 	}
@@ -97,5 +120,14 @@ public class GameThemeManagement : MonoBehaviour {
 	//get size of "list_img_theme" array into list_img_theme_size variable;
 	private void setImgThemeSize(){
 		list_img_theme_size = list_img_theme.Length;
+	}
+
+	//retrieve data from JSON file (themes.js)
+	private void setThemeObj(){
+		using (StreamReader r = new StreamReader("Assets/Script/JSON/themes.js")){
+			string json = r.ReadToEnd ();
+			json = json.Remove(json.Length - 2,2).Remove (0, 12).Replace(" ", String.Empty);
+			string[] theme = json.Split (',');
+		}
 	}
 }

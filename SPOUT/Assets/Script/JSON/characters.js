@@ -1,1 +1,1 @@
-var data = [{"name": null, "sex": null}]
+var data = [{"name": null, "sex": null}];

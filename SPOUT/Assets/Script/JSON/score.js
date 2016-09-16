@@ -1,1 +1,1 @@
-var data = [{"event_id": null, "date": null, "score": null}]
+var data = [{"event_id": null, "date": null, "score": null}];

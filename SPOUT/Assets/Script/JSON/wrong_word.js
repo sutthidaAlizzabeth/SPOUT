@@ -1,1 +1,1 @@
-var data = [{"count": null, "word": null}]
+var data = [{"count": null, "word": null}];
