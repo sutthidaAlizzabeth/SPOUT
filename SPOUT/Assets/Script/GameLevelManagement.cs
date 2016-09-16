@@ -11,7 +11,7 @@ public class GameLevelManagement : MonoBehaviour {
 	private Button btn_normal;
 	private Button btn_hard;
 
-	static public Dictionary<int,Event> levelList = new Dictionary<int, Event>();
+	static public Dictionary<int,Event> levelList = new Dictionary<int, Event> ();
 	static public Event level;
 
 	// Use this for initialization
@@ -27,12 +27,14 @@ public class GameLevelManagement : MonoBehaviour {
 		btn_normal.interactable = false;
 		btn_hard.interactable = false;
 
+		levelList.Clear ();
+
 		//find all levels of choosed theme
 		findLevel (GameThemeManagement.theme.id);
 
 		if (levelList.Count != 0) {
 			//set choosed theme to thm_name
-			thm_name.text = levelList [1].level; //GameThemeManagement.theme.name;
+			thm_name.text = GameThemeManagement.theme.name;
 
 			//set interaction of button
 			foreach (int id in levelList.Keys) {
@@ -44,6 +46,7 @@ public class GameLevelManagement : MonoBehaviour {
 					btn_hard.interactable = true;
 				}
 			}
+
 		} else {
 			thm_name.text = "No Level";
 		}
