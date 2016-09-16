@@ -1,0 +1,11 @@
+e.g. and meaning
+
+b = banner
+bg = background
+btn = button
+f = frame
+i = icon
+l = line
+pic = picture
+thm = theme
+

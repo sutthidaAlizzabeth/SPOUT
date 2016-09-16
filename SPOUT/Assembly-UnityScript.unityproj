@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\JSON\themes.js" />
      <Compile Include="Assets\Script\JSON\vocabularies.js" />
      <Compile Include="Assets\Script\JSON\wrong_word.js" />
+     <None Include="Assets\Resources\Asset Description.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

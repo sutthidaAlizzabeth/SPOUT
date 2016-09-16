@@ -55,7 +55,9 @@
      <Compile Include="Assets\Script\GameVocabManagement.cs" />
      <Compile Include="Assets\Script\GoBack.cs" />
      <Compile Include="Assets\Script\GoGameLevel.cs" />
+     <Compile Include="Assets\Script\LayOut.cs" />
      <Compile Include="Assets\Script\ShowLogo.cs" />
+     <None Include="Assets\Resources\Asset Description.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
