@@ -1,9 +1,9 @@
 var data = [{
-    "theme_id": "th_1",
-    "id": "e_1",
+    "theme_id": "1",
+    "id": "1",
     "level": "normal"
 }, {
-	"theme_id": "th_2",
-    "id": "e_2",
+	"theme_id": "2",
+    "id": "2",
     "level": "normal"
 }];

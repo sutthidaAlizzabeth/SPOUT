@@ -5,14 +5,14 @@ using System.Collections;
 
 public class GameLevelManagement : MonoBehaviour {
 
-	private Text thm_name;
+	//private Text thm_name;
 	static public string level;
 
 	// Use this for initialization
 	void Start () {
 		//get 'thm_name' object (Text) in Unity (game_level scene)
-		thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
-		thm_name.text = GameThemeManagement.theme;
+		//thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
+		//thm_name.text = GameThemeManagement.theme;
 	}
 
 	public void levelEasy(){
