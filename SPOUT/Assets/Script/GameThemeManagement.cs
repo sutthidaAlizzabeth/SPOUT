@@ -75,26 +75,31 @@ public class GameThemeManagement : MonoBehaviour {
 	}
 
 	private void setThemeButton(int indexOfButton){
-		string[] obj = null;
+		ArrayList obj = new ArrayList ();
+		int num = 0;
+		string json = "";
 		using (StreamReader r = new StreamReader("Assets/Script/JSON/themes.js")){
-			string json = r.ReadToEnd ();
+			json = r.ReadToEnd ();
 			json = json.Remove(json.Length - 2,2).Remove (0, 12).Replace(" ", String.Empty);
-			bool find = true;
 			do{
-				if(json.IndexOf("{") != -1){
-					json.Remove(json.IndexOf("{"));
-				}
-				else if(json.IndexOf("}") != -1){
-					json.Remove(json.IndexOf("}"));
+				if(json.IndexOf("{") == 0){
+					num = json.IndexOf("}") + 1;
+					obj.Add(json.Substring(0,num));
+					json = json.Remove(0, num);
 				}
 				else{
-					find = false;
+					num = json.IndexOf("{");
+					json = json.Remove(0, num);
+					num = json.IndexOf("}") + 1;
+					obj.Add(json.Substring(0,num));
+					json = json.Remove(0, num);
 				}
+				num = json.IndexOf("{");
 			}
-			while(find);
-
-			obj = json.Split (',');
+			while(num != -1);
 		}
+
+		Theme t = JsonUtility.FromJson<Theme> (obj [0].ToString());
 
 
 		//load sprite (image) from Resource/g_theme
@@ -102,7 +107,7 @@ public class GameThemeManagement : MonoBehaviour {
 		//set sprite (image) into btn_theme
 		btn_theme.image.overrideSprite = img_theme;
 		//set image name into "description"
-		description.text = obj[0]; //list_img_theme [indexOfButton].Substring(4);
+		description.text = obj[1].ToString(); //list_img_theme [indexOfButton].Substring(4);
 		//prepare "theme" global variable for sending to other scenes
 		theme = getDescriptionName ();
 	}

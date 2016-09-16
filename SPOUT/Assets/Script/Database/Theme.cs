@@ -4,10 +4,9 @@ using System.Collections.Generic;
 
 
 public class Theme{
-	private string id;
-	private string name;
-	private string image;
-	static int themeAttribute = 3;
+	public string id;
+	public string name;
+	public string image;
 
 	public void setId(string id){
 		this.id = id;
@@ -33,21 +32,5 @@ public class Theme{
 		return this.image;
 	}
 
-	static public Dictionary<String,Theme> genThemeList(string[] obj){
-		int num = themeAttribute;
-		//int i = 1;
-		Dictionary<String,Theme> themeList = new Dictionary<String,Theme> ();
-		Theme t = null;
 
-		foreach(string o in obj){
-			if (num == 3) {
-				t = new Theme ();
-			}
-			if(o.Contains("id")){
-				
-			}
-		}
-
-		return themeList;
-	}
 }
