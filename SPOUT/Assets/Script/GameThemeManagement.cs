@@ -12,15 +12,10 @@ public class GameThemeManagement : MonoBehaviour {
 	private Text description;
 
 	//all theme objects
-	static public Dictionary<int,Theme> themeList;
+	static public Dictionary<int,Theme> themeList = null;
 	//choosed theme object
 	static public Theme theme;
 
-	void Awake(){
-		themeList = Theme.genThemeList ();
-		theme = themeList [1];
-
-	}
 
 	// Use this for initialization
 	//this method was call first
@@ -29,18 +24,13 @@ public class GameThemeManagement : MonoBehaviour {
 		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
 
-		//set content of btn_theme and theme description
-		//at the first, use index 1 (first theme id)
-		//setThemeButton (int.Parse(theme.id));
-		if (Theme.genThemeList() != null) {
-			setThemeButton (int.Parse (theme.id));
-		} else {
-			btn_theme.image.overrideSprite = Resources.Load ("g_theme/thm_flirting", typeof(Sprite)) as Sprite;
-			description.text = "them = null";
-		}
+		themeList = Theme.genThemeList ();
+		theme = themeList[1];
+
+		setThemeButton (int.Parse(theme.id));
 	}
 		
-	
+
 	// when touch btn_go button
 	public void go () {
 		//get theme id of current theme object

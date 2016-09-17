@@ -15,3 +15,5 @@
 /Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/Alizzabeth/SPOUT Project/SPOUT/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

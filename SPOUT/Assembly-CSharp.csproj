@@ -48,8 +48,11 @@
      <Compile Include="Assets\Script\BasicPopupManagement.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\Database\Event.cs" />
+     <Compile Include="Assets\Script\Database\Knowledge.cs" />
      <Compile Include="Assets\Script\Database\Theme.cs" />
+     <Compile Include="Assets\Script\Database\Vocabulary.cs" />
      <Compile Include="Assets\Script\Fading.cs" />
+     <Compile Include="Assets\Script\GameCharacterManagement.cs" />
      <Compile Include="Assets\Script\GameLevelManagement.cs" />
      <Compile Include="Assets\Script\GameThemeManagement.cs" />
      <Compile Include="Assets\Script\GameVocabManagement.cs" />
@@ -57,12 +60,25 @@
      <Compile Include="Assets\Script\GoGameLevel.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
      <Compile Include="Assets\Script\ShowLogo.cs" />
+     <None Include="Assets\Resources\JSON\knowledge.txt" />
      <None Include="Assets\Resources\Asset Description.txt" />
+     <None Include="Assets\Resources\JSON\dialog.txt" />
+     <None Include="Assets\Resources\JSON\score.txt" />
+     <None Include="Assets\Resources\JSON\themes.txt" />
+     <None Include="Assets\Resources\JSON\wrong_word.txt" />
+     <None Include="Assets\Resources\JSON\vocabularies.txt" />
+     <None Include="Assets\Resources\JSON\events.txt" />
+     <None Include="Assets\Resources\JSON\problems.txt" />
+     <None Include="Assets\Resources\JSON\languages.txt" />
+     <None Include="Assets\Resources\JSON\characters.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>/Users/Alizzabeth/SPOUT Project/SPOUT/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

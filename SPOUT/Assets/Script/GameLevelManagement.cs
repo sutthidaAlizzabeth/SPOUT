@@ -12,7 +12,7 @@ public class GameLevelManagement : MonoBehaviour {
 	private Button btn_hard;
 
 	static public Dictionary<int,Event> levelList = new Dictionary<int, Event> ();
-	static public Event level;
+	static public string level;
 
 	// Use this for initialization
 	void Start () {
@@ -51,6 +51,21 @@ public class GameLevelManagement : MonoBehaviour {
 			thm_name.text = "No Level";
 		}
 	
+	}
+
+	public void easy(){
+		level = "easy";
+		goToVocab ();
+	}
+
+	public void normal(){
+		level = "normal";
+		goToVocab ();
+	}
+
+	public void hard(){
+		level = "hard";
+		goToVocab ();
 	}
 
 	//find all level of choosed theme

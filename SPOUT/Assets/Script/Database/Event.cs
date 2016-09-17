@@ -12,12 +12,10 @@ public class Event{
 		Dictionary<int, Event> eventList = new Dictionary<int, Event> ();
 		Event e = null;
 		int num = 0;
-		string json = "";
 
-		//read json string
-		using (StreamReader r = new StreamReader("Assets/Script/JSON/events.js")){
-			json = r.ReadToEnd ();
-		}
+		//transform json string to string
+		TextAsset jsonText = Resources.Load ("JSON/events", typeof(TextAsset)) as TextAsset;
+		string json = jsonText.text.ToString ();
 
 		// prepare string for transforming to object
 		json = json.Remove(json.Length - 2,2).Remove (0, 12);
