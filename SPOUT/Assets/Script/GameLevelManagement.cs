@@ -12,7 +12,7 @@ public class GameLevelManagement : MonoBehaviour {
 	private Button btn_hard;
 
 	static public Dictionary<int,Event> levelList = new Dictionary<int, Event> ();
-	static public string level;
+	static public Event level;
 
 	// Use this for initialization
 	void Start () {
@@ -54,17 +54,29 @@ public class GameLevelManagement : MonoBehaviour {
 	}
 
 	public void easy(){
-		level = "easy";
+		foreach(int id in levelList.Keys){
+			if(levelList[id].level.Equals("easy")){
+				level = levelList [id];
+			}
+		}
 		goToVocab ();
 	}
 
 	public void normal(){
-		level = "normal";
+		foreach(int id in levelList.Keys){
+			if(levelList[id].level.Equals("normal")){
+				level = levelList [id];
+			}
+		}
 		goToVocab ();
 	}
 
 	public void hard(){
-		level = "hard";
+		foreach(int id in levelList.Keys){
+			if(levelList[id].level.Equals("hard")){
+				level = levelList [id];
+			}
+		}
 		goToVocab ();
 	}
 

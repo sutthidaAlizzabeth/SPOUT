@@ -12,9 +12,9 @@ public class GameThemeManagement : MonoBehaviour {
 	private Text description;
 
 	//all theme objects
-	static public Dictionary<int,Theme> themeList = null;
+	static public Dictionary<int,Theme> themeList = Theme.genThemeList ();
 	//choosed theme object
-	static public Theme theme;
+	static public Theme theme = themeList[1];
 
 
 	// Use this for initialization
@@ -23,9 +23,6 @@ public class GameThemeManagement : MonoBehaviour {
 		//get game objects from Unity (game_theme scene)
 		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
-
-		themeList = Theme.genThemeList ();
-		theme = themeList[1];
 
 		setThemeButton (int.Parse(theme.id));
 	}
