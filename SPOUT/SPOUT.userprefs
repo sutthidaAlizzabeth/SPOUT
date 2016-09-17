@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameLevelManagement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameThemeManagement.cs">
     <Files>
       <File FileName="Assets/Script/GameLevelManagement.cs" Line="36" Column="35" />
-      <File FileName="Assets/Script/GameVocabManagement.cs" Line="13" Column="2" />
-      <File FileName="Assets/Script/JSON/events.js" Line="1" Column="1" />
-      <File FileName="Assets/Script/Database/Event.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/GameThemeManagement.cs" Line="23" Column="15" />
+      <File FileName="Assets/Script/GameThemeManagement.cs" Line="45" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

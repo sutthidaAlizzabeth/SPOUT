@@ -23,6 +23,9 @@ public class GameThemeManagement : MonoBehaviour {
 		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
 
+		themeList = Theme.genThemeList ();
+		theme = themeList [1];
+
 		//set content of btn_theme and theme description
 		//at the first, use index 1 (first theme id)
 		setThemeButton (int.Parse(theme.id));
