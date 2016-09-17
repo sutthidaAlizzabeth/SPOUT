@@ -31,7 +31,13 @@ public class GameThemeManagement : MonoBehaviour {
 
 		//set content of btn_theme and theme description
 		//at the first, use index 1 (first theme id)
-		setThemeButton (int.Parse(theme.id));
+		//setThemeButton (int.Parse(theme.id));
+		if (Theme.genThemeList() != null) {
+			setThemeButton (int.Parse (theme.id));
+		} else {
+			btn_theme.image.overrideSprite = Resources.Load ("g_theme/thm_flirting", typeof(Sprite)) as Sprite;
+			description.text = "them = null";
+		}
 	}
 		
 	
