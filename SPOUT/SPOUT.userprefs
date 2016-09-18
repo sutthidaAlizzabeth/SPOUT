@@ -1,6 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameCharacterManagement.cs">
+    <Files>
+      <File FileName="Assets/Resources/JSON/characters.txt" Line="1" Column="13" />
+      <File FileName="Assets/Script/Database/Event.cs" Line="45" Column="3" />
+      <File FileName="Assets/Script/Database/Character.cs" Line="43" Column="23" />
+      <File FileName="Assets/Script/GameCharacterManagement.cs" Line="21" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Script\BasicPopupManagement.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
+     <Compile Include="Assets\Script\Database\Character.cs" />
      <Compile Include="Assets\Script\Database\Event.cs" />
      <Compile Include="Assets\Script\Database\Knowledge.cs" />
      <Compile Include="Assets\Script\Database\Theme.cs" />
