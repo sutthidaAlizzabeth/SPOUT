@@ -8,8 +8,8 @@ public class GameCharacterManagement : MonoBehaviour {
 	private Button npc;
 	private Button user;
 	private Button selectedCharacter;
-	private Button selectedNpc;
-	private Button selectedUser;
+	static public Button selectedNpc;
+	static public Button selectedUser;
 	private Button selectedNpcIcon;
 	private Button selectedUserIcon;
 	private Dictionary<int,Button> btn_icon;
@@ -25,16 +25,22 @@ public class GameCharacterManagement : MonoBehaviour {
 		npc.image.overrideSprite = Resources.Load ("g_character/char_1", typeof(Sprite)) as Sprite;
 		user.image.overrideSprite = Resources.Load ("g_character/char_2", typeof(Sprite)) as Sprite;
 
+		//set selected NPC and user
+		selectedNpc = npc;
+		selectedUser = user;
+
 		//set color of button
 		//setColorCharacter(selected button, unselected button)
 		setColorCharacter (npc, user);
 
+		//get all icon components
 		btn_icon = new Dictionary<int, Button>();
 		btn_icon.Add (1,GameObject.Find ("btn_char_1").GetComponent (typeof(Button)) as Button);
 		btn_icon.Add (2,GameObject.Find ("btn_char_2").GetComponent (typeof(Button)) as Button);
 		btn_icon.Add (3,GameObject.Find ("btn_char_3").GetComponent (typeof(Button)) as Button);
 		btn_icon.Add (4,GameObject.Find ("btn_char_4").GetComponent (typeof(Button)) as Button);
 
+		//select default npc and user icon
 		selectedNpcIcon = btn_icon [1];
 		selectedUserIcon = btn_icon [2];
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
@@ -44,8 +50,10 @@ public class GameCharacterManagement : MonoBehaviour {
 		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[1].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
+			selectedNpc = selectedCharacter;
 			selectedNpcIcon = btn_icon [1];
 		} else {
+			selectedUser = selectedCharacter;
 			selectedUserIcon = btn_icon [1];
 		}
 
@@ -56,8 +64,10 @@ public class GameCharacterManagement : MonoBehaviour {
 		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[2].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
+			selectedNpc = selectedCharacter;
 			selectedNpcIcon = btn_icon [2];
 		} else {
+			selectedUser = selectedCharacter;
 			selectedUserIcon = btn_icon [2];
 		}
 
@@ -68,8 +78,10 @@ public class GameCharacterManagement : MonoBehaviour {
 		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[3].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
+			selectedNpc = selectedCharacter;
 			selectedNpcIcon = btn_icon [3];
 		} else {
+			selectedUser = selectedCharacter;
 			selectedUserIcon = btn_icon [3];
 		}
 
@@ -80,8 +92,10 @@ public class GameCharacterManagement : MonoBehaviour {
 		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[4].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
+			selectedNpc = selectedCharacter;
 			selectedNpcIcon = btn_icon [4];
 		} else {
+			selectedUser = selectedCharacter;
 			selectedUserIcon = btn_icon [4];
 		}
 
