@@ -1,1 +1,1 @@
-var data = [{"id": "1","name": "Flirting on first meet","image": "thm_flirting"},{"id": "2","name": "School","image": "thm_school"}];
+var data = [{"id": "1","name": "แรกพบสบตา","image": "thm_flirting"},{"id": "2","name": "โรงเรียน","image": "thm_school"}];

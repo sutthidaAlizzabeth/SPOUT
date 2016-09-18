@@ -11,7 +11,7 @@ public class GameVocabManagement : MonoBehaviour {
 	void Start () {
 		getVocab ();
 		topic = GameObject.Find ("topic").GetComponent (typeof(Text)) as Text;
-		topic.text = vocabList.Count.ToString();
+		topic.text = "คำศัพท์น่ารู้";
 
 	}
 	
