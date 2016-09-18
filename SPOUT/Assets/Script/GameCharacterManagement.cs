@@ -23,7 +23,7 @@ public class GameCharacterManagement : MonoBehaviour {
 
 		//set default sprite to character button
 		npc.image.overrideSprite = Resources.Load ("g_character/char_1", typeof(Sprite)) as Sprite;
-		user.image.overrideSprite = Resources.Load ("g_character/char_2", typeof(Sprite)) as Sprite;
+		user.image.overrideSprite = Resources.Load ("g_character/char_3", typeof(Sprite)) as Sprite;
 
 		//set selected NPC and user
 		selectedNpc = npc;
@@ -121,8 +121,8 @@ public class GameCharacterManagement : MonoBehaviour {
 
 	private void setInteractiveIcon(Button pncIcon, Button userIcon){
 		foreach(int id in btn_icon.Keys){
-			if (!btn_icon [id].Equals (pncIcon) && !btn_icon [id].Equals (userIcon)) {
-				btn_icon [id].interactable = true;
+			if (!btn_icon [id].Equals (pncIcon) && !btn_icon [id].Equals (userIcon)){
+					btn_icon [id].interactable = true;
 			} else {
 				btn_icon [id].interactable = false;
 			}

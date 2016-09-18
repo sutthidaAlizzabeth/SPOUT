@@ -7,6 +7,7 @@ public class Event{
 	public string id;
 	public string theme_id;
 	public string level;
+	public int start_person;
 
 	static public Dictionary<int,Event> genEventList(){
 		Dictionary<int, Event> eventList = new Dictionary<int, Event> ();
