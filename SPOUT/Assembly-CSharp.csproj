@@ -45,14 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\BasicPopupManagement.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\Database\Character.cs" />
      <Compile Include="Assets\Script\Database\Event.cs" />
      <Compile Include="Assets\Script\Database\Knowledge.cs" />
      <Compile Include="Assets\Script\Database\Theme.cs" />
      <Compile Include="Assets\Script\Database\Vocabulary.cs" />
-     <Compile Include="Assets\Script\Fading.cs" />
      <Compile Include="Assets\Script\GameCharacterManagement.cs" />
      <Compile Include="Assets\Script\GameDialogManagment.cs" />
      <Compile Include="Assets\Script\GameLevelManagement.cs" />
@@ -61,8 +59,6 @@
      <Compile Include="Assets\Script\GoBack.cs" />
      <Compile Include="Assets\Script\GoGameLevel.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
-     <Compile Include="Assets\Script\ShowLogo.cs" />
-     <Compile Include="Assets\Script\SoundButton.cs" />
      <None Include="Assets\Resources\JSON\knowledge.txt" />
      <None Include="Assets\Resources\Asset Description.txt" />
      <None Include="Assets\Resources\JSON\dialog.txt" />

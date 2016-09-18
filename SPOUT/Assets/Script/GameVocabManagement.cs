@@ -30,10 +30,10 @@ public class GameVocabManagement : MonoBehaviour {
 		btn_vocab_2_text = GameObject.Find ("btn_vocab_2_text").GetComponent (typeof(Text)) as Text;
 		btn_vocab_3_text = GameObject.Find ("btn_vocab_3_text").GetComponent (typeof(Text)) as Text;
 		btn_vocab_4_text = GameObject.Find ("btn_vocab_4_text").GetComponent (typeof(Text)) as Text;
-		btn_vocab_1_text.text = vocabList [1].content + " " + vocabList[1].type;
-		btn_vocab_2_text.text = vocabList [2].content + " " + vocabList[2].type;
-		btn_vocab_3_text.text = vocabList [3].content + " " + vocabList[3].type;
-		btn_vocab_4_text.text = vocabList [4].content + " " + vocabList[4].type;
+		btn_vocab_1_text.text = vocabList [1].content + " (" + vocabList[1].type+")";
+		btn_vocab_2_text.text = vocabList [2].content + " (" + vocabList[2].type+")";
+		btn_vocab_3_text.text = vocabList [3].content + " (" + vocabList[3].type+")";
+		btn_vocab_4_text.text = vocabList [4].content + " (" + vocabList[4].type+")";
 
 		//collect text in vocab button
 		btn_text = new Dictionary<int, Text>();
@@ -56,15 +56,15 @@ public class GameVocabManagement : MonoBehaviour {
 	}
 
 	public void clickVocab(Knowledge k, Text t){
-		if (t.text.Equals (k.content+" "+k.type)) {
+		if (t.text.Equals (k.content+" ("+k.type+")")) {
 			foreach(int id in btn_text.Keys){
-				if (!btn_text[id].text.Equals (k.content+" "+k.type)) {
-					btn_text[id].text = vocabList[id].content + " " + vocabList[id].type;
+				if (!btn_text[id].text.Equals (k.content+" ("+k.type+")")) {
+					btn_text[id].text = vocabList[id].content + " ("+vocabList[id].type+")";
 				}
 			}
 			t.text = k.meaning;
 		} else {
-			t.text = k.content + " " + k.type;
+			t.text = k.content + " ("+k.type+")";
 		}
 	}
 
