@@ -62,6 +62,7 @@
      <Compile Include="Assets\Script\GoGameLevel.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
      <Compile Include="Assets\Script\ShowLogo.cs" />
+     <Compile Include="Assets\Script\SoundButton.cs" />
      <None Include="Assets\Resources\JSON\knowledge.txt" />
      <None Include="Assets\Resources\Asset Description.txt" />
      <None Include="Assets\Resources\JSON\dialog.txt" />
