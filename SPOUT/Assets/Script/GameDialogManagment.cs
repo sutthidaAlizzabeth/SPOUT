@@ -37,15 +37,19 @@ public class GameDialogManagment : MonoBehaviour {
 	}
 
 	public void speak(){
+		btn_speak.interactable = false;
 		btn_speak.image.color = Color.clear;
 		btn_next.image.color = Color.white;
+		btn_next.interactable = true;
 		btn_next_text.enabled = true;
 	}
 
 	public void next(){
 		if (dialogList[index].person.Equals(1)) {
 			btn_speak.image.color = Color.clear;
+			btn_speak.interactable = false;
 			btn_next.enabled = true;
+			btn_next.interactable = true;
 			btn_next_text.enabled = true;
 			npc.enabled = true;
 			user.enabled = false;
@@ -63,7 +67,9 @@ public class GameDialogManagment : MonoBehaviour {
 			index++;
 		} else {
 			btn_speak.image.color = Color.white;
+			btn_speak.interactable = true;
 			btn_next.image.color = Color.clear;
+			btn_next.interactable = false;
 			btn_next_text.enabled = false;
 			npc.enabled = false;
 			user.enabled = true;

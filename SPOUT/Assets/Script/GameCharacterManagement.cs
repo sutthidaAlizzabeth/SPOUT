@@ -42,7 +42,7 @@ public class GameCharacterManagement : MonoBehaviour {
 
 		//select default npc and user icon
 		selectedNpcIcon = btn_icon [1];
-		selectedUserIcon = btn_icon [2];
+		selectedUserIcon = btn_icon [3];
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
 	}
 

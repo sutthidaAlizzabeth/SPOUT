@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System;
 using System.Collections;
 
@@ -16,7 +17,10 @@ public class GoBack : MonoBehaviour {
 			//user touch "back" button in sc_main
 			//user want to close app
 			if (String.Compare (sceneName, "quit") == 0) {
-				Application.Quit();
+				Canvas popupCanvas = GameObject.Find ("popup").GetComponent (typeof(Canvas)) as Canvas;
+				Image panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
+				popupCanvas.enabled = true;
+				panel.enabled = true;
 			} else {
 				//load scene
 				SceneManager.LoadScene (sceneName);

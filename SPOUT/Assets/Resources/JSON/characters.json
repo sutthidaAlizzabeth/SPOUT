@@ -1,0 +1,1 @@
+var data = [{"id": "0", "sex": "0", "type": "char"}, {"id": "1", "sex": "m", "type": "char"}, {"id": "2", "sex": "m", "type": "char"}, {"id": "3", "sex": "f", "type": "char"}, {"id": "4", "sex": "f", "type": "char"}, {"id": "1", "sex": "m", "type": "icon"}, {"id": "2", "sex": "m", "type": "icon"}, {"id": "3", "sex": "f", "type": "icon"}, {"id": "4", "sex": "f", "type": "icon"}];
