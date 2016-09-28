@@ -10,6 +10,7 @@ public class GameThemeManagement : MonoBehaviour {
 
 	private Button btn_theme;
 	private Text description;
+	private Text text_page;
 
 	//all theme objects
 	static public Dictionary<int,Theme> themeList;
@@ -26,12 +27,15 @@ public class GameThemeManagement : MonoBehaviour {
 		if (theme == null) {
 			theme = themeList[1];
 		}
+			
 
 		//get game objects from Unity (game_theme scene)
 		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
+		text_page = GameObject.Find ("text_page").GetComponent (typeof(Text)) as Text;
 
 		setThemeButton (int.Parse(theme.id));
+		setThemePage (int.Parse(theme.id));
 	}
 		
 
@@ -49,7 +53,8 @@ public class GameThemeManagement : MonoBehaviour {
 			index = index + 1;
 		}
 
-		//set content of btn_theme and theme description
+		//set content of btn_theme, theme description and page
+		setThemePage(index);
 		setThemeButton (index);
 	}
 
@@ -66,8 +71,9 @@ public class GameThemeManagement : MonoBehaviour {
 			index = index - 1;
 		}
 
-		//set content of btn_theme and theme description
+		//set content of btn_theme theme description and page
 		setThemeButton (index);
+		setThemePage (index);
 	}
 
 	private void setThemeButton(int index){
@@ -77,6 +83,10 @@ public class GameThemeManagement : MonoBehaviour {
 		description.text = themeList[index].name;
 		//prepare "theme" global variable for sending to other scenes
 		theme = themeList[index];
+	}
+
+	private void setThemePage(int number){
+		text_page.text = number + "/" + themeList.Count;
 	}
 
 	//user click at the choosed theme, then scene change to game_level

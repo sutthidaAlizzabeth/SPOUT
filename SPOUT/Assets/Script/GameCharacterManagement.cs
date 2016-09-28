@@ -106,7 +106,8 @@ public class GameCharacterManagement : MonoBehaviour {
 	public void chooseCharacter(string selected){
 		if (selected.Equals ("npc")) {
 			setColorCharacter (npc,user);
-		} else {
+		}
+		if(selected.Equals ("user")){
 			setColorCharacter (user,npc);
 		}
 	}
