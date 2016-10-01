@@ -2,8 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameCharacterManagement.cs">
     <Files>
-      <File FileName="Assets/Script/GameVocabManagement.cs" Line="52" Column="48" />
-      <File FileName="Assets/Script/GameCharacterManagement.cs" Line="108" Column="33" />
+      <File FileName="Assets/Script/MainManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameCharacterManagement.cs" Line="96" Column="44" />
+      <File FileName="Assets/Script/Database/Character.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/JSON/characters.json" Line="1" Column="1" />
+      <File FileName="Assets/Script/Sound.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameThemeManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Popup.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

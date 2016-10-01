@@ -2,17 +2,16 @@
 using System.Collections;
 
 public class Sound : MonoBehaviour {
-	//1 = not mute
-	//-1 = mute
-	//0 = not setting
-	static public bool effectMute;
+
+	static public bool effectMute; // default = false
 	//initiate = true when user start Application, then initiate = flase
-	static public bool soundInitiate;
+	static public bool soundInitiate; // default = false
 	private AudioSource effect;
 
 	void Start(){
 		effect = GameObject.Find ("effect_sound").GetComponent (typeof(AudioSource)) as AudioSource;
-		//if not setting effectMute
+		//this condition (if condition) use only first time when user start application
+		//if don't setting effectMute (effectMute = false) and soundInitiate = false
 		if (!effectMute && !soundInitiate) {
 			effect.mute = false;
 			soundInitiate = true;

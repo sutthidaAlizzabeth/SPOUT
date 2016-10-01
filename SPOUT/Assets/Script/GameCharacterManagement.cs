@@ -13,13 +13,14 @@ public class GameCharacterManagement : MonoBehaviour {
 	private Button selectedNpcIcon;
 	private Button selectedUserIcon;
 	private Dictionary<int,Button> btn_icon;
+	private Dictionary<int,Character> icon_image;
+	private Dictionary<int,Character> char_image;
 
 	// Use this for initialization
 	void Start () {
 		//get character button components
 		npc = GameObject.Find ("npc").GetComponent (typeof(Button)) as Button;
 		user = GameObject.Find ("user").GetComponent (typeof(Button)) as Button;
-
 
 		//set default sprite to character button
 		npc.image.overrideSprite = Resources.Load ("g_character/char_1", typeof(Sprite)) as Sprite;
@@ -40,14 +41,108 @@ public class GameCharacterManagement : MonoBehaviour {
 		btn_icon.Add (3,GameObject.Find ("btn_char_3").GetComponent (typeof(Button)) as Button);
 		btn_icon.Add (4,GameObject.Find ("btn_char_4").GetComponent (typeof(Button)) as Button);
 
+
+		//set sprite to btn_icon
+		getCharacter ();
+		int count = 1;
+		foreach (int i in icon_image.Keys) {
+			btn_icon [count].image.overrideSprite = Resources.Load ("g_character/icon_" + icon_image [i].id, typeof(Sprite)) as Sprite;
+			if (count == 4) {
+				break;
+			} else {
+				count++;
+			}
+		}
+
 		//select default npc and user icon
 		selectedNpcIcon = btn_icon [1];
 		selectedUserIcon = btn_icon [3];
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
 	}
 
-	public void chooseIcon1(){
-		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[1].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
+	public void go(){
+		string name = btn_icon [2].image.overrideSprite.name;
+		int id = int.Parse(name.Substring (name.IndexOf("_")+1));
+		int npcIconId = 0;
+		int userIconId = 0;
+
+		for(int i = 1 ; i <= 4 ; i++){
+			btn_icon [i].image.overrideSprite = Resources.Load ("g_character/icon_" + icon_image [id].id, typeof(Sprite)) as Sprite;
+
+			if (btn_icon [i].image.overrideSprite.name == selectedNpcIcon.image.overrideSprite.name) {
+				npcIconId = i;
+			}
+
+			if(btn_icon[i].image.overrideSprite.name == selectedUserIcon.image.overrideSprite.name){
+				userIconId = i;
+			}
+
+			if (id == icon_image.Count) {
+				id = 1;
+			} else {
+				id++;
+			}
+		}
+
+		if ((npcIconId) == 1) {
+			selectedNpcIcon = btn_icon [4];
+		} else {
+			selectedNpcIcon = btn_icon [npcIconId-1];
+		}
+
+		if ((userIconId) == 1) {
+			selectedUserIcon = btn_icon [4];
+		} else {
+			selectedUserIcon = btn_icon [userIconId-1];
+		}
+
+		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
+	}
+
+	public void back(){
+		string name = btn_icon [3].image.overrideSprite.name;
+		int id = int.Parse(name.Substring (name.IndexOf("_")+1));
+		int npcIconId = 0;
+		int userIconId = 0;
+
+		for(int i = 4 ; i >= 1 ; i--){
+
+			btn_icon [i].image.overrideSprite = Resources.Load ("g_character/icon_" + icon_image [id].id, typeof(Sprite)) as Sprite;
+
+			if (btn_icon [i].image.overrideSprite.name == selectedNpcIcon.image.overrideSprite.name) {
+				npcIconId = i;
+			}
+
+			if(btn_icon[i].image.overrideSprite.name == selectedUserIcon.image.overrideSprite.name){
+				userIconId = i;
+			}
+
+			if (id == 1) { 
+				id = icon_image.Count;
+			} else {
+				id--;
+			}
+
+		}
+
+		if ((npcIconId) == 4) {
+			selectedNpcIcon = btn_icon [1];
+		} else {
+			selectedNpcIcon = btn_icon [npcIconId+1];
+		}
+
+		if ((userIconId) == 4) {
+			selectedUserIcon = btn_icon [1];
+		} else {
+			selectedUserIcon = btn_icon [userIconId+1];
+		}
+			
+
+		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
+	}
+
+	public void chooseIcon1(Button btn){
+		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[1].image.overrideSprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
 			selectedNpc = selectedCharacter;
@@ -60,8 +155,8 @@ public class GameCharacterManagement : MonoBehaviour {
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
 	}
 
-	public void chooseIcon2(){
-		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[2].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
+	public void chooseIcon2(Button btn){
+		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[2].image.overrideSprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
 			selectedNpc = selectedCharacter;
@@ -74,8 +169,8 @@ public class GameCharacterManagement : MonoBehaviour {
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
 	}
 
-	public void chooseIcon3(){
-		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[3].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
+	public void chooseIcon3(Button btn){
+		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[3].image.overrideSprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
 			selectedNpc = selectedCharacter;
@@ -88,8 +183,8 @@ public class GameCharacterManagement : MonoBehaviour {
 		setInteractiveIcon (selectedNpcIcon, selectedUserIcon);
 	}
 
-	public void chooseIcon4(){
-		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[4].image.sprite.name.Substring(5), typeof(Sprite)) as Sprite;
+	public void chooseIcon4(Button btn){
+		selectedCharacter.image.overrideSprite = Resources.Load ("g_character/char_" + btn_icon[4].image.overrideSprite.name.Substring(5), typeof(Sprite)) as Sprite;
 
 		if (selectedCharacter.name.Equals ("npc")) {
 			selectedNpc = selectedCharacter;
@@ -120,12 +215,29 @@ public class GameCharacterManagement : MonoBehaviour {
 		selectedCharacter = selected;
 	}
 
+	//set interactive of btn_icon
 	private void setInteractiveIcon(Button pncIcon, Button userIcon){
 		foreach(int id in btn_icon.Keys){
-			if (!btn_icon [id].Equals (pncIcon) && !btn_icon [id].Equals (userIcon)){
+			if (!btn_icon [id].image.overrideSprite.name.Equals (pncIcon.image.overrideSprite.name) && !btn_icon [id].image.overrideSprite.name.Equals (userIcon.image.overrideSprite.name)){
 					btn_icon [id].interactable = true;
 			} else {
 				btn_icon [id].interactable = false;
+			}
+		}
+	}
+		
+
+	private void getCharacter(){
+		int id;
+		char_image = new Dictionary<int, Character> ();
+		icon_image = new Dictionary<int, Character> ();
+		Dictionary<string,Character> characterList = Character.genCharacterList ();
+		foreach(string key in characterList.Keys){
+			id = int.Parse(characterList [key].id);
+			if (key.Contains ("char")){
+				char_image.Add (id, characterList [key]);
+			} else {
+				icon_image.Add (id, characterList [key]);
 			}
 		}
 	}
