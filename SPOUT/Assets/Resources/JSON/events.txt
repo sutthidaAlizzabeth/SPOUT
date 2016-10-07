@@ -1,1 +1,0 @@
-var data = [{"theme_id": "1","id": "1","level": "normal", "start_person": 1.0}, {"theme_id": "2","id": "2","level": "easy", "start_person": 1.0}];

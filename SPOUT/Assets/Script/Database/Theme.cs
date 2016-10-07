@@ -7,6 +7,7 @@ public class Theme{
 	public string id;
 	public string name;
 	public string image;
+	public int warning;
 
 	static public Dictionary<int,Theme> genThemeList(){
 		//prepare variable

@@ -1,1 +1,0 @@
-var data = [{"event_id": "1", "knowledge_id": "1"}, {"event_id": "1", "knowledge_id": "2"}, {"event_id": "1", "knowledge_id": "3"}, {"event_id": "1", "knowledge_id": "4"}, {"event_id": "1", "knowledge_id": "5"}, {"event_id": "1", "knowledge_id": "6"}, {"event_id": "1", "knowledge_id": "7"}, {"event_id": "1", "knowledge_id": "8"}];

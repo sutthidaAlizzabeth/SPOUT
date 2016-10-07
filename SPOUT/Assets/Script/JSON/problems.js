@@ -1,1 +1,0 @@
-var data = [{"status": null, "description": null, "id": null, "topic": null, "date": null, "email": null}];

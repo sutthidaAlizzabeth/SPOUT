@@ -14,7 +14,7 @@ public class Dialog {
 
 	static public Dictionary<string,Dialog> genDialogList(){
 		Dictionary<string, Dialog> dialogList = new Dictionary<string, Dialog> ();
-		Dialog d = null;
+		Dialog d = new Dialog();
 		int num = 0;
 
 		//transform json string to string

@@ -1,1 +1,0 @@
-var data = [{"count": null, "word": null}];

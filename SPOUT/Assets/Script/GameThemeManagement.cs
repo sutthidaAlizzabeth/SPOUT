@@ -16,6 +16,8 @@ public class GameThemeManagement : MonoBehaviour {
 	static public Dictionary<int,Theme> themeList;
 	//choosed theme object
 	static public Theme theme;
+	private Canvas warnningCanvas;
+	private Image panel;
 
 
 	// Use this for initialization
@@ -34,8 +36,15 @@ public class GameThemeManagement : MonoBehaviour {
 		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
 		text_page = GameObject.Find ("text_page").GetComponent (typeof(Text)) as Text;
 
+		//set image of btn_theme, description and text_page
 		setThemeButton (int.Parse(theme.id));
 		setThemePage (int.Parse(theme.id));
+
+		//at first, warning popup don't show
+		warnningCanvas = GameObject.Find ("warning").GetComponent (typeof(Canvas)) as Canvas;
+		panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
+		warnningCanvas.enabled = false;
+		panel.enabled = false;
 	}
 		
 
@@ -91,7 +100,13 @@ public class GameThemeManagement : MonoBehaviour {
 
 	//user click at the choosed theme, then scene change to game_level
 	public void goToLevel(){
-		SceneManager.LoadScene ("game_level");
+		if (theme.warning == 1) {
+			warnningCanvas.enabled = true;
+			panel.enabled = true;
+		} else {
+			SceneManager.LoadScene ("game_level");
+		}
+
 	}
 
 }
