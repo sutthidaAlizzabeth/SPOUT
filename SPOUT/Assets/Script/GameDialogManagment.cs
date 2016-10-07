@@ -11,11 +11,15 @@ public class GameDialogManagment : MonoBehaviour {
 	private Text btn_next_text;
 	private Button btn_next;
 	private Button btn_speak;
-	static public int index;
-	static public Dictionary<int,Dialog> dialogList = new Dictionary<int, Dialog>();
+	private int index;
+	private Dictionary<int,Dialog> dialogList;
 
 	// Use this for initialization
 	void Start () {
+		//dont' show any popup at first
+		Canvas exitCanvas = GameObject.Find ("exit").GetComponent (typeof(Canvas)) as Canvas;
+		exitCanvas.enabled = false;
+
 		//set initail characters
 		npc = GameObject.Find ("npc").GetComponent (typeof(SpriteRenderer)) as SpriteRenderer;
 		npc.sprite = GameCharacterManagement.selectedNpc.image.overrideSprite;
@@ -30,6 +34,7 @@ public class GameDialogManagment : MonoBehaviour {
 		btn_next_text = GameObject.Find ("btn_next_text").GetComponent (typeof(Text)) as Text;
 
 		//get all conversation of this event
+		dialogList = new Dictionary<int, Dialog>();
 		getConversation ();
 
 		index = 1;
