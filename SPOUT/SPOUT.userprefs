@@ -1,8 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameDialogManagment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\GameDialogManagment.cs">
     <Files>
-      <File FileName="Assets/Script/GameDialogManagment.cs" Line="32" Column="39" />
+      <File FileName="Assets\Script\Popup.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\GameThemeManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MainManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\GameDialogManagment.cs" Line="15" Column="9" />
+      <File FileName="Assets\Script\Database\Dialog.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,14 +12,10 @@ public class GameDialogManagment : MonoBehaviour {
 	private Button btn_next;
 	private Button btn_speak;
 	private int index;
-	private Dictionary<int,Dialog> dialogList;
+	private Dictionary<string,Dialog> dialogList;
 
 	// Use this for initialization
 	void Start () {
-		//dont' show any popup at first
-		Canvas exitCanvas = GameObject.Find ("exit").GetComponent (typeof(Canvas)) as Canvas;
-		exitCanvas.enabled = false;
-
 		//set initail characters
 		npc = GameObject.Find ("npc").GetComponent (typeof(SpriteRenderer)) as SpriteRenderer;
 		npc.sprite = GameCharacterManagement.selectedNpc.image.overrideSprite;
@@ -34,11 +30,15 @@ public class GameDialogManagment : MonoBehaviour {
 		btn_next_text = GameObject.Find ("btn_next_text").GetComponent (typeof(Text)) as Text;
 
 		//get all conversation of this event
-		dialogList = new Dictionary<int, Dialog>();
+		dialogList = new Dictionary<string, Dialog>();
 		getConversation ();
 
 		index = 1;
 		next ();
+
+		//at default, don't show  exit popup
+		Canvas exitCanvas = GameObject.Find ("exit").GetComponent (typeof(Canvas)) as Canvas;
+		exitCanvas.enabled = false;
 	}
 
 	public void speak(){
@@ -50,7 +50,7 @@ public class GameDialogManagment : MonoBehaviour {
 	}
 
 	public void next(){
-		if (dialogList[index].person.Equals(1)) {
+		if (dialogList[index.ToString()].person == 1) {
 			btn_speak.image.color = Color.clear;
 			btn_speak.interactable = false;
 			btn_next.enabled = true;
@@ -60,13 +60,13 @@ public class GameDialogManagment : MonoBehaviour {
 			user.enabled = false;
 
 			if (npc.sprite.name.Contains ("1") || npc.sprite.name.Contains ("2")) {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
+				eng.text = dialogList [index.ToString()].dialog;
+				th.text = dialogList [index.ToString()].meaning.Replace("ค่ะ","ครับ");
 				th.text = th.text.Replace("คะ","ครับ");
 				th.text = th.text.Replace ("ฉัน","ผม");
 			} else {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning;
+				eng.text = dialogList [index.ToString()].dialog;
+				th.text = dialogList [index.ToString()].meaning;
 			}
 
 			index++;
@@ -80,26 +80,27 @@ public class GameDialogManagment : MonoBehaviour {
 			user.enabled = true;
 
 			if (user.sprite.name.Contains ("1") || user.sprite.name.Contains ("2")) {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
+				eng.text = dialogList [index.ToString()].dialog;
+				th.text = dialogList [index.ToString()].meaning.Replace("ค่ะ","ครับ");
 				th.text = th.text.Replace("คะ","ครับ");
 				th.text = th.text.Replace ("ฉัน","ผม");
 			} else {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning;
+				eng.text = dialogList [index.ToString()].dialog;
+				th.text = dialogList [index.ToString()].meaning;
 			}
 
 			index++;
 		}
 	}
-	
+
 	private void getConversation(){
-		Dictionary<string,Dialog> allDialogList = Dialog.genDialogList ();
+		Dictionary<string,Dialog> allDialogList = new Dictionary<string, Dialog> ();
+		allDialogList = Dialog.genDialogList ();
 		int count = 1;
 
 		foreach(string key in allDialogList.Keys){
 			if (allDialogList [key].event_id.Equals (GameLevelManagement.level.id)) {
-				dialogList.Add (count, allDialogList [key]);
+				dialogList.Add (count.ToString(), allDialogList [key]);
 				count++;
 			}
 		}
