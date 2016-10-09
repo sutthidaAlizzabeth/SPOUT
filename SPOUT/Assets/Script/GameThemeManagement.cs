@@ -101,8 +101,27 @@ public class GameThemeManagement : MonoBehaviour {
 	//user click at the choosed theme, then scene change to game_level
 	public void goToLevel(){
 		if (theme.warning == 1) {
-			warnningCanvas.enabled = true;
-			panel.enabled = true;
+			//get data from themeWarning.json in Asset floder
+			//if this file exist, app will run in try side
+			//is this file don't exist, app will run in catch side (because of error)
+			try{
+				string msg = File.ReadAllText (Application.persistentDataPath+"/themeWarning.json");
+				if (msg != null) {
+					Setting setting = JsonUtility.FromJson<Setting>(msg);
+					//"false" means show popup
+					if(setting.value == "false"){
+						warnningCanvas.enabled = true;
+						panel.enabled = true;
+					}
+					else{
+						SceneManager.LoadScene ("game_level");
+					}
+				}
+			}
+			catch{
+				warnningCanvas.enabled = true;
+				panel.enabled = true;
+			}
 		} else {
 			SceneManager.LoadScene ("game_level");
 		}

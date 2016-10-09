@@ -23,7 +23,15 @@ public class GoBack : MonoBehaviour {
 				popupCanvas.enabled = true;
 				panel.enabled = true;
 				settingCanvas.enabled = false;
-			} else {
+			}
+			else if(String.Compare (sceneName, "game") == 0) {
+				Canvas exitCanvas = GameObject.Find ("exit").GetComponent (typeof(Canvas)) as Canvas;
+				Image panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
+				Canvas settingCanvas = GameObject.Find ("setting").GetComponent (typeof(Canvas)) as Canvas;
+				exitCanvas.enabled = true;
+				panel.enabled = true;
+				settingCanvas.enabled = false;
+			}else {
 				//load scene
 				SceneManager.LoadScene (sceneName);
 			}

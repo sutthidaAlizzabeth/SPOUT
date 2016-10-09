@@ -46,21 +46,24 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\ChangeScene.cs" />
-     <Compile Include="Assets\Script\Database\Character.cs" />
-     <Compile Include="Assets\Script\Database\Dialog.cs" />
-     <Compile Include="Assets\Script\Database\Event.cs" />
-     <Compile Include="Assets\Script\Database\Knowledge.cs" />
-     <Compile Include="Assets\Script\Database\Theme.cs" />
-     <Compile Include="Assets\Script\Database\Vocabulary.cs" />
+     <Compile Include="Assets\Script\Config.cs" />
      <Compile Include="Assets\Script\GameCharacterManagement.cs" />
      <Compile Include="Assets\Script\GameDialogManagment.cs" />
      <Compile Include="Assets\Script\GameLevelManagement.cs" />
+     <Compile Include="Assets\Script\GameQuizManagement.cs" />
      <Compile Include="Assets\Script\GameThemeManagement.cs" />
      <Compile Include="Assets\Script\GameVocabManagement.cs" />
      <Compile Include="Assets\Script\GoBack.cs" />
      <Compile Include="Assets\Script\GoGameLevel.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
      <Compile Include="Assets\Script\MainManagement.cs" />
+     <Compile Include="Assets\Script\Object\Character.cs" />
+     <Compile Include="Assets\Script\Object\Dialog.cs" />
+     <Compile Include="Assets\Script\Object\Event.cs" />
+     <Compile Include="Assets\Script\Object\Knowledge.cs" />
+     <Compile Include="Assets\Script\Object\Setting.cs" />
+     <Compile Include="Assets\Script\Object\Theme.cs" />
+     <Compile Include="Assets\Script\Object\Vocabulary.cs" />
      <Compile Include="Assets\Script\Popup.cs" />
      <Compile Include="Assets\Script\Sound.cs" />
      <None Include="Assets\Resources\Asset Description.txt" />
