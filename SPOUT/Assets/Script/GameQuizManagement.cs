@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,9 +9,11 @@ public class GameQuizManagement : MonoBehaviour {
 	private Canvas popup_wrong;
 	private Image panel;
 	private Text dialog;
-	private Dictionary<string, Dialog> allThemeDialog;
-	private int countDialog;
-	private string randomDialog;
+	private Dictionary<string, Dialog> allThemeDialog; //all dialog in this theme
+	private int countDialog;// allThemeDialog.Count
+	private string randomDialog; //get from allThemeDialog, and will show in scene
+	private int countQuiz; //number of questions that user test
+	private int randomKey; //random key
 
 	// Use this for initialization
 	void Start () {
@@ -24,8 +27,8 @@ public class GameQuizManagement : MonoBehaviour {
 
 		//get all dialog in this theme
 		genAllThemeDialog ();
-		countDialog = allThemeDialog.Count;
 
+		countQuiz = 1;
 		randomQuizDialog ();
 
 	}
@@ -43,8 +46,18 @@ public class GameQuizManagement : MonoBehaviour {
 
 	public void randomQuizDialog(){
 		closeCheckBox ();
-		randomDialog = allThemeDialog[Random.Range(1,countDialog).ToString()].dialog;
-		dialog.text = randomDialog;
+		countDialog = allThemeDialog.Count;
+		if (countQuiz <= 10) {
+			do {
+				randomKey = Random.Range (1, countDialog);
+			} while(!allThemeDialog.ContainsKey (randomKey.ToString ()));
+			countQuiz++;
+			randomDialog = allThemeDialog [randomKey.ToString ()].dialog;
+			allThemeDialog.Remove (randomKey.ToString ());
+			dialog.text = randomDialog;
+		} else {
+			SceneManager.LoadScene ("game_quiz_total");
+		}
 	}
 	
  	//generate all dialog in this theme
@@ -57,9 +70,9 @@ public class GameQuizManagement : MonoBehaviour {
 
 		int count = 1;
 		foreach (int event_id in GameLevelManagement.levelList.Keys) {
-			foreach (string key in allDialogList.Keys) {
-				if (allDialogList [key].event_id.Equals (event_id.ToString())) {
-					allThemeDialog.Add (count.ToString (), allDialogList [key]);
+			foreach (string id in allDialogList.Keys) {
+				if (allDialogList [id].event_id.Equals (event_id.ToString())) {
+					allThemeDialog.Add (count.ToString (), allDialogList [id]);
 					count++;
 				}
 			}
