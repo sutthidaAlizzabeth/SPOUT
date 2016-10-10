@@ -3,17 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Dialog {
-	public string id;
+	public int id;
 	public int person;
-	public string event_id;
+	public int event_id;
 	public int sequence;
 	public string background_name;
 	public string meaning;
 	public string dialog;
 	public int choice;
+	public bool quiz;
 
-	static public Dictionary<string,Dialog> genDialogList(){
-		Dictionary<string, Dialog> dialogList = new Dictionary<string, Dialog> ();
+	static public Dictionary<int,Dialog> genDialogList(){
+		Dictionary<int, Dialog> dialogList = new Dictionary<int, Dialog> ();
 		Dialog d = new Dialog();
 		int num = 0;
 
