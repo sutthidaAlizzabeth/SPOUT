@@ -1,0 +1,51 @@
+An Android Plugin for Unity that will help you access Text Recognizer and Text To Speech features on Android devices with in Unity.<br><br>
+
+<STRONG>List of Features:</STRONG><br><br>
+
+1.  Speech To Text<br>
+2.  Speech To Text Events<br>
+2.  Text To Speech<br>
+3.  TTS Set Locale ex. US,UK,Japanese<br>
+4.  Text To Speech Set Pitch<br>
+5.  Text To Speech Set Speech Rate<br>
+6.  Text To Speech Set Speech Volume<br>
+7.  Text To Speech Events<br>
+8.  TTS get available locale on device<br>
+9.  change language on Speech Recognizer but it depends on device, it may work or not<br>
+10. Speech Recognizer no beep<br>
+11.  TTS get available Extra locale on device always depends on device if may work or not work<br>
+12. Added TTS Demo 2<br>
+13. Added Speech Recognizer Demo 2<br>
+14. Code Refactoring and some improvements<br><br>
+
+<STRONG>Updates:</STRONG><br><br>
+* Added Offline mode on Speech Recognizer (but use only english)<br>
+* Added Partial Results on Speech Recognizer<br>
+* Added Enable and disable beep on speech Recognizer<br>
+* Added Enable and disable modal on speech Recognizer<br><br>
+
+
+<STRONG>Note: Does not extend UnityPlayerActivity</STRONG><br><br>
+
+<STRONG>Note: For C# Lovers only</STRONG><br><br>
+
+<STRONG>This set is just few features, if you want to access more features on Android device</STRONG><br>
+<STRONG>We suggest you to buy Android Ultimate Plugin instead</STRONG><br><br>
+
+<STRONG>Android Ultimate Plugin</STRONG><br>
+<p><a href="https://www.assetstore.unity3d.com/en/#!/content/38872">Android Ultimate Plugin</a></a><br><br>
+
+<STRONG>Lite Version</STRONG><br>
+<p><a href="https://www.assetstore.unity3d.com/en/#!/content/43374">Android Ultimate Plugin LITE</a></a><br><br>
+
+<STRONG>For more Information:</STRONG><br>
+
+<p><a href="http://www.gigadrillgames.com/android-ultimate-plugin/">Details | </a> <a href="http://www.gigadrillgames.com/2015/07/26/list-of-tutorials-for-android-ultimate-plugin/"> Tutorials | </a> <a href="http://www.gigadrillgames.com/2015/07/29/faq-android-ultimate-plugin/"> FAQ </a><br><br>
+
+<STRONG>Try Apk Demo:</STRONG><br>
+<a href="https://drive.google.com/file/d/0Bw14w3QBZaGxX1hGYjhQQ1l1UEU/view?usp=sharing"> Demo </a><br><br>
+
+
+<STRONG>For questions or suggestions or any feedback just contact us by email</STRONG> <br>
+
+<p><a href="mailto:gigadrillgames@gmail.com">gigadrillgames@gmail.com</a><br>

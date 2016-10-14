@@ -45,8 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\Callback\SpeechCallback.cs" />
+     <Compile Include="Assets\Script\Callback\TTSCallback.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\Config.cs" />
+     <Compile Include="Assets\Script\Enum\EnumExtentions.cs" />
+     <Compile Include="Assets\Script\Enum\SpeechExtraLocale.cs" />
+     <Compile Include="Assets\Script\Enum\SpeechLocale.cs" />
+     <Compile Include="Assets\Script\Enum\SpeechRecognizerError.cs" />
+     <Compile Include="Assets\Script\Enum\TTSLocaleCountry.cs" />
+     <Compile Include="Assets\Script\Examples\SpeechRecognizerDemo.cs" />
+     <Compile Include="Assets\Script\Examples\SpeechRecognizerDemo2.cs" />
+     <Compile Include="Assets\Script\Examples\TextToSpeechDemo.cs" />
+     <Compile Include="Assets\Script\Examples\TextToSpeechDemo2.cs" />
      <Compile Include="Assets\Script\GameCharacterManagement.cs" />
      <Compile Include="Assets\Script\GameDialogManagment.cs" />
      <Compile Include="Assets\Script\GameLevelManagement.cs" />
@@ -55,7 +66,15 @@
      <Compile Include="Assets\Script\GameVocabManagement.cs" />
      <Compile Include="Assets\Script\GoBack.cs" />
      <Compile Include="Assets\Script\GoGameLevel.cs" />
+     <Compile Include="Assets\Script\Helpers\HideShowGameObject.cs" />
+     <Compile Include="Assets\Script\Helpers\SpeechLocaleHelper.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
+     <Compile Include="Assets\Script\Main\AUPHolder.cs" />
+     <Compile Include="Assets\Script\Main\DemoController.cs" />
+     <Compile Include="Assets\Script\Main\SpeechPlugin.cs" />
+     <Compile Include="Assets\Script\Main\TextToSpeechPlugin.cs" />
+     <Compile Include="Assets\Script\Main\Utils.cs" />
+     <Compile Include="Assets\Script\Main\UtilsPlugin.cs" />
      <Compile Include="Assets\Script\MainManagement.cs" />
      <Compile Include="Assets\Script\Object\Character.cs" />
      <Compile Include="Assets\Script\Object\Dialog.cs" />
@@ -65,8 +84,14 @@
      <Compile Include="Assets\Script\Object\Theme.cs" />
      <Compile Include="Assets\Script\Object\Vocabulary.cs" />
      <Compile Include="Assets\Script\Popup.cs" />
+     <Compile Include="Assets\Script\RetrieveThemes.cs" />
      <Compile Include="Assets\Script\Sound.cs" />
+     <Compile Include="Assets\Script\TextToSpeech.cs" />
+     <None Include="Assets\SpeechTTS\MetaData.txt" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\Asset Description.txt" />
+     <None Include="Assets\Plugins\Android\SampleAndroidManifest\AndroidManifest.xml" />
+     <None Include="Assets\SpeechTTS\ReadMe.txt.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
