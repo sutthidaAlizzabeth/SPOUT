@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 
 public class Event{
-	public string id;
-	public string theme_id;
-	public string level;
+	public int id;
+	public int theme_id;
+	public string level_en;
+	public string level_th;
 	public int start_person;
 
 	static public Dictionary<int,Event> genEventList(){
@@ -26,14 +27,14 @@ public class Event{
 			if(json.IndexOf("{") == 0){
 				num = json.IndexOf("}") + 1;
 				e = JsonUtility.FromJson<Event>(json.Substring(0, num));
-				eventList.Add(int.Parse(e.id),e);
+				eventList.Add(e.id,e);
 				json = json.Remove(0, num);
 			}
 			else{
 				json = json.Remove(0, json.IndexOf("{"));
 				num = json.IndexOf("}") + 1;
 				e = JsonUtility.FromJson<Event>(json.Substring(0, num));
-				eventList.Add(int.Parse(e.id),e);
+				eventList.Add(e.id,e);
 				json = json.Remove(0, num);
 			}
 

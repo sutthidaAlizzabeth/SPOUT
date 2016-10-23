@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class GameCharacterManagement : MonoBehaviour {
 
-	private Button npc;
-	private Button user;
+	public Button npc;
+	public Button user;
 	private Button selectedCharacter;
 	static public Button selectedNpc;
 	static public Button selectedUser;
@@ -19,8 +19,8 @@ public class GameCharacterManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//get character button components
-		npc = GameObject.Find ("npc").GetComponent (typeof(Button)) as Button;
-		user = GameObject.Find ("user").GetComponent (typeof(Button)) as Button;
+//		npc = GameObject.Find ("npc").GetComponent (typeof(Button)) as Button;
+//		user = GameObject.Find ("user").GetComponent (typeof(Button)) as Button;
 
 		//set default sprite to character button
 		npc.image.overrideSprite = Resources.Load ("g_character/char_1", typeof(Sprite)) as Sprite;
@@ -231,9 +231,9 @@ public class GameCharacterManagement : MonoBehaviour {
 		int id;
 		char_image = new Dictionary<int, Character> ();
 		icon_image = new Dictionary<int, Character> ();
-		Dictionary<string,Character> characterList = Character.genCharacterList ();
+		Dictionary<string,Character> characterList = ConnectDatabase.genCharacterList ();
 		foreach(string key in characterList.Keys){
-			id = int.Parse(characterList [key].id);
+			id = characterList [key].id;
 			if (key.Contains ("char")){
 				char_image.Add (id, characterList [key]);
 			} else {

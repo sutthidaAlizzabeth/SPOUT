@@ -4,14 +4,14 @@ using System.Collections.Generic;
 
 public class Dialog {
 	public int id;
-	public int person;
 	public int event_id;
 	public int sequence;
 	public string background_name;
-	public string meaning;
+	public float choice;
+	public int person;
 	public string dialog;
-	public int choice;
-	public bool quiz;
+	public string meaning;
+	public int quiz;
 
 	static public Dictionary<int,Dialog> genDialogList(){
 		Dictionary<int, Dialog> dialogList = new Dictionary<int, Dialog> ();

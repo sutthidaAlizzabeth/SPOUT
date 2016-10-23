@@ -49,6 +49,7 @@
      <Compile Include="Assets\Script\Callback\TTSCallback.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\Config.cs" />
+     <Compile Include="Assets\Script\ConnectDatabase.cs" />
      <Compile Include="Assets\Script\Enum\EnumExtentions.cs" />
      <Compile Include="Assets\Script\Enum\SpeechExtraLocale.cs" />
      <Compile Include="Assets\Script\Enum\SpeechLocale.cs" />
@@ -84,8 +85,8 @@
      <Compile Include="Assets\Script\Object\Theme.cs" />
      <Compile Include="Assets\Script\Object\Vocabulary.cs" />
      <Compile Include="Assets\Script\Popup.cs" />
-     <Compile Include="Assets\Script\RetrieveThemes.cs" />
      <Compile Include="Assets\Script\Sound.cs" />
+     <Compile Include="Assets\Script\SpeechToText.cs" />
      <Compile Include="Assets\Script\TextToSpeech.cs" />
      <None Include="Assets\SpeechTTS\MetaData.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />

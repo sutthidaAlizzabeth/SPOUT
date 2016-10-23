@@ -5,15 +5,15 @@ using System.Collections.Generic;
 
 public class GameVocabManagement : MonoBehaviour {
 	static public Dictionary<int,Knowledge> vocabList;
-	private Text topic;
-	private Text btn_vocab_1_text;
-	private Text btn_vocab_2_text;
-	private Text btn_vocab_3_text;
-	private Text btn_vocab_4_text;
-	private Button btn_vocab_1;
-	private Button btn_vocab_2;
-	private Button btn_vocab_3;
-	private Button btn_vocab_4;
+	public Text topic;
+	public Text btn_vocab_1_text;
+	public Text btn_vocab_2_text;
+	public Text btn_vocab_3_text;
+	public Text btn_vocab_4_text;
+	public Button btn_vocab_1;
+	public Button btn_vocab_2;
+	public Button btn_vocab_3;
+	public Button btn_vocab_4;
 	private Dictionary<int,Text> btn_text;
 
 	// Use this for initialization
@@ -26,10 +26,10 @@ public class GameVocabManagement : MonoBehaviour {
 		topic.text = "คำศัพท์น่ารู้";
 
 		//get text of vocab components
-		btn_vocab_1_text = GameObject.Find ("btn_vocab_1_text").GetComponent (typeof(Text)) as Text;
-		btn_vocab_2_text = GameObject.Find ("btn_vocab_2_text").GetComponent (typeof(Text)) as Text;
-		btn_vocab_3_text = GameObject.Find ("btn_vocab_3_text").GetComponent (typeof(Text)) as Text;
-		btn_vocab_4_text = GameObject.Find ("btn_vocab_4_text").GetComponent (typeof(Text)) as Text;
+//		btn_vocab_1_text = GameObject.Find ("btn_vocab_1_text").GetComponent (typeof(Text)) as Text;
+//		btn_vocab_2_text = GameObject.Find ("btn_vocab_2_text").GetComponent (typeof(Text)) as Text;
+//		btn_vocab_3_text = GameObject.Find ("btn_vocab_3_text").GetComponent (typeof(Text)) as Text;
+//		btn_vocab_4_text = GameObject.Find ("btn_vocab_4_text").GetComponent (typeof(Text)) as Text;
 		btn_vocab_1_text.text = vocabList [1].content + " (" + vocabList[1].type+")";
 		btn_vocab_2_text.text = vocabList [2].content + " (" + vocabList[2].type+")";
 		btn_vocab_3_text.text = vocabList [3].content + " (" + vocabList[3].type+")";
@@ -43,10 +43,10 @@ public class GameVocabManagement : MonoBehaviour {
 		btn_text.Add (4,btn_vocab_4_text);
 
 		//get button components
-		btn_vocab_1 = GameObject.Find("btn_vocab_1").GetComponent(typeof(Button)) as Button;
-		btn_vocab_2 = GameObject.Find("btn_vocab_2").GetComponent(typeof(Button)) as Button;
-		btn_vocab_3 = GameObject.Find("btn_vocab_3").GetComponent(typeof(Button)) as Button;
-		btn_vocab_4 = GameObject.Find("btn_vocab_4").GetComponent(typeof(Button)) as Button;
+//		btn_vocab_1 = GameObject.Find("btn_vocab_1").GetComponent(typeof(Button)) as Button;
+//		btn_vocab_2 = GameObject.Find("btn_vocab_2").GetComponent(typeof(Button)) as Button;
+//		btn_vocab_3 = GameObject.Find("btn_vocab_3").GetComponent(typeof(Button)) as Button;
+//		btn_vocab_4 = GameObject.Find("btn_vocab_4").GetComponent(typeof(Button)) as Button;
 
 		//add click event into button
 		btn_vocab_1.onClick.AddListener (() => clickVocab(vocabList[1],btn_vocab_1_text));
@@ -71,8 +71,8 @@ public class GameVocabManagement : MonoBehaviour {
 	private void getVocab(){
 		int num = 1;
 		//prepare data set and variable
-		Dictionary<int, Knowledge> allKnowledgeList = Knowledge.genKnowledgeList ();
-		Dictionary<string,Vocabulary> allVocabList = Vocabulary.genVocabularyList ();
+		Dictionary<int, Knowledge> allKnowledgeList = ConnectDatabase.genKnowledgeList();//Knowledge.genKnowledgeList ();
+		Dictionary<string,Vocabulary> allVocabList = ConnectDatabase.genVocabularyList();//Vocabulary.genVocabularyList ();
 		ArrayList knowledgeKeyList = new ArrayList ();
 		vocabList = new Dictionary<int, Knowledge> ();
 

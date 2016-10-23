@@ -6,10 +6,10 @@ using System.Collections.Generic;
 
 public class GameLevelManagement : MonoBehaviour {
 
-	private Text thm_name;
-	private Button btn_easy;
-	private Button btn_normal;
-	private Button btn_hard;
+	public Text thm_name;
+	public Button btn_easy;
+	public Button btn_normal;
+	public Button btn_hard;
 
 	static public Dictionary<int,Event> levelList = new Dictionary<int, Event> ();
 	static public Event level;
@@ -17,10 +17,10 @@ public class GameLevelManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//get game objects from Unity (game_level scene)
-		thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
-		btn_easy = GameObject.Find("btn_easy").GetComponent(typeof(Button)) as Button;
-		btn_normal = GameObject.Find("btn_normal").GetComponent(typeof(Button)) as Button;
-		btn_hard = GameObject.Find("btn_hard").GetComponent(typeof(Button)) as Button;
+//		thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
+//		btn_easy = GameObject.Find("btn_easy").GetComponent(typeof(Button)) as Button;
+//		btn_normal = GameObject.Find("btn_normal").GetComponent(typeof(Button)) as Button;
+//		btn_hard = GameObject.Find("btn_hard").GetComponent(typeof(Button)) as Button;
 
 		//set default button isn't interactive
 		btn_easy.interactable = false;
@@ -34,13 +34,13 @@ public class GameLevelManagement : MonoBehaviour {
 
 		if (levelList.Count != 0) {
 			//set choosed theme to thm_name
-			thm_name.text = GameThemeManagement.theme.name;
+			thm_name.text = GameThemeManagement.theme.name_th;
 
 			//set interaction of button
 			foreach (int id in levelList.Keys) {
-				if (levelList [id].level.Equals ("easy")) {
+				if (levelList [id].level_en.Equals ("easy")) {
 					btn_easy.interactable = true;
-				} else if (levelList [id].level.Equals ("normal")) {
+				} else if (levelList [id].level_en.Equals ("normal")) {
 					btn_normal.interactable = true;
 				} else {
 					btn_hard.interactable = true;
@@ -55,7 +55,7 @@ public class GameLevelManagement : MonoBehaviour {
 
 	public void easy(){
 		foreach(int id in levelList.Keys){
-			if(levelList[id].level.Equals("easy")){
+			if(levelList[id].level_en.Equals("easy")){
 				level = levelList [id];
 			}
 		}
@@ -64,7 +64,7 @@ public class GameLevelManagement : MonoBehaviour {
 
 	public void normal(){
 		foreach(int id in levelList.Keys){
-			if(levelList[id].level.Equals("normal")){
+			if(levelList[id].level_en.Equals("normal")){
 				level = levelList [id];
 			}
 		}
@@ -73,7 +73,7 @@ public class GameLevelManagement : MonoBehaviour {
 
 	public void hard(){
 		foreach(int id in levelList.Keys){
-			if(levelList[id].level.Equals("hard")){
+			if(levelList[id].level_en.Equals("hard")){
 				level = levelList [id];
 			}
 		}
@@ -81,9 +81,9 @@ public class GameLevelManagement : MonoBehaviour {
 	}
 
 	//find all level of choosed theme
-	public Dictionary<int,Event> findLevel(string themeId){
+	public Dictionary<int,Event> findLevel(int themeId){
 		//get all level of all theme
-		Dictionary<int,Event> eventList = Event.genEventList ();
+		Dictionary<int,Event> eventList = ConnectDatabase.genEventList();//Event.genEventList ();
 
 		if (eventList.Count != 0) {
 			foreach(int id in eventList.Keys){

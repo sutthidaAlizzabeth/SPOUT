@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 
 public class Theme{
-	public string id;
-	public string name;
+	public int id;
+	public string name_en;
+	public string name_th;
 	public string image;
 	public int warning;
 
@@ -27,14 +28,14 @@ public class Theme{
 			if(json.IndexOf("{") == 0){
 				num = json.IndexOf("}") + 1;
 				t = JsonUtility.FromJson<Theme>(json.Substring(0, num));
-				themeList.Add(int.Parse(t.id),t);
+				themeList.Add(t.id,t);
 				json = json.Remove(0, num);
 			}
 			else{
 				json = json.Remove(0, json.IndexOf("{"));
 				num = json.IndexOf("}") + 1;
 				t = JsonUtility.FromJson<Theme>(json.Substring(0, num));
-				themeList.Add(int.Parse(t.id),t);
+				themeList.Add(t.id,t);
 				json = json.Remove(0, num);
 			}
 

@@ -85,7 +85,7 @@ public class GameQuizManagement : MonoBehaviour {
 		//get all event keys in this theme and match them with event_id in all dialog
 		foreach (int event_id in GameLevelManagement.levelList.Keys) {
 			foreach (int id in allDialogList.Keys) {
-				if (allDialogList [id].event_id.Equals (event_id) && allDialogList[id].quiz) {
+				if (allDialogList [id].event_id.Equals (event_id) && allDialogList[id].quiz.Equals(1)) {
 					allThemeDialog.Add (count, allDialogList [id]);
 					count++;
 				}

@@ -11,6 +11,7 @@ public class GameDialogManagment : MonoBehaviour {
 	private Text btn_next_text;
 	private Button btn_next;
 	private Button btn_speak;
+	private Button btn_stop;
 	private int index;
 	private Dictionary<int,Dialog> dialogList;
 
@@ -27,6 +28,7 @@ public class GameDialogManagment : MonoBehaviour {
 		th = GameObject.Find ("subtitle").GetComponent (typeof(Text)) as Text;
 		btn_next = GameObject.Find ("btn_next").GetComponent (typeof(Button)) as Button;
 		btn_speak = GameObject.Find ("btn_speak").GetComponent (typeof(Button)) as Button;
+		btn_stop = GameObject.Find ("btn_stop").GetComponent (typeof(Button)) as Button;
 		btn_next_text = GameObject.Find ("btn_next_text").GetComponent (typeof(Text)) as Text;
 
 		//get all conversation of this event
@@ -44,15 +46,30 @@ public class GameDialogManagment : MonoBehaviour {
 	public void speak(){
 		btn_speak.interactable = false;
 		btn_speak.image.color = Color.clear;
+		btn_next.image.color = Color.clear;
+		btn_next.interactable = false;
+		btn_next_text.enabled = false;
+		btn_stop.image.color = Color.white;
+		btn_stop.interactable = true;
+		btn_stop.enabled = true;
+	}
+
+	public void stop(){
+		btn_speak.interactable = false;
+		btn_speak.image.color = Color.clear;
 		btn_next.image.color = Color.white;
 		btn_next.interactable = true;
 		btn_next_text.enabled = true;
+		btn_stop.image.color = Color.clear;
+		btn_stop.interactable = false;
 	}
 
 	public void next(){
 		if (dialogList[index].person == 1) {
 			btn_speak.image.color = Color.clear;
 			btn_speak.interactable = false;
+			btn_stop.image.color = Color.clear;
+			btn_stop.interactable = false;
 			btn_next.enabled = true;
 			btn_next.interactable = true;
 			btn_next_text.enabled = true;
@@ -73,6 +90,8 @@ public class GameDialogManagment : MonoBehaviour {
 		} else {
 			btn_speak.image.color = Color.white;
 			btn_speak.interactable = true;
+			btn_speak.interactable = false;
+			btn_stop.image.color = Color.clear;
 			btn_next.image.color = Color.clear;
 			btn_next.interactable = false;
 			btn_next_text.enabled = false;

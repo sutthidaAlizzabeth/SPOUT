@@ -3,8 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 
 public class Vocabulary{
-	public string event_id;
-	public string knowledge_id;
+	public int event_id;
+	public int knowledge_id;
 
 	static public Dictionary<string,Vocabulary> genVocabularyList(){
 		//prepare variable

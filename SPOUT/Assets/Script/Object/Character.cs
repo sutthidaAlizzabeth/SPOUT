@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 
 public class Character{
-	public string id;
+	public int id;
 	public string sex;
 	public string type;
 

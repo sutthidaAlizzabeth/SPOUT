@@ -8,23 +8,23 @@ using System.Collections.Generic;
 
 public class GameThemeManagement : MonoBehaviour {
 
-	private Button btn_theme;
-	private Text description;
-	private Text text_page;
+	public Button btn_theme;
+	public Text description;
+	public Text text_page;
 
 	//all theme objects
 	static public Dictionary<int,Theme> themeList;
 	//choosed theme object
 	static public Theme theme;
-	private Canvas warnningCanvas;
-	private Image panel;
+	public Canvas warnningCanvas;
+	public Image panel;
 
 
 	// Use this for initialization
 	//this method was call first
 	void Start () {
 		themeList = new Dictionary<int, Theme> ();
-		themeList = Theme.genThemeList ();
+		themeList = ConnectDatabase.genThemeList ();//Theme.genThemeList ();
 
 		if (theme == null) {
 			theme = themeList[1];
@@ -32,17 +32,17 @@ public class GameThemeManagement : MonoBehaviour {
 			
 
 		//get game objects from Unity (game_theme scene)
-		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
-		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
-		text_page = GameObject.Find ("text_page").GetComponent (typeof(Text)) as Text;
+//		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
+//		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
+//		text_page = GameObject.Find ("text_page").GetComponent (typeof(Text)) as Text;
 
 		//set image of btn_theme, description and text_page
-		setThemeButton (int.Parse(theme.id));
-		setThemePage (int.Parse(theme.id));
+		setThemeButton (theme.id);
+		setThemePage (theme.id);
 
 		//at first, warning popup don't show
-		warnningCanvas = GameObject.Find ("warning").GetComponent (typeof(Canvas)) as Canvas;
-		panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
+//		warnningCanvas = GameObject.Find ("warning").GetComponent (typeof(Canvas)) as Canvas;
+//		panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
 		warnningCanvas.enabled = false;
 		panel.enabled = false;
 	}
@@ -51,7 +51,7 @@ public class GameThemeManagement : MonoBehaviour {
 	// when touch btn_go button
 	public void go () {
 		//get theme id of current theme object
-		int index = int.Parse(theme.id);
+		int index = theme.id;
 
 		//set the next index of list_img_theme
 		//if current index is the last index, then set index = 1 (return to the first image)
@@ -69,7 +69,7 @@ public class GameThemeManagement : MonoBehaviour {
 
 	public void back(){
 		//get theme id of current theme object
-		int index = int.Parse(theme.id);
+		int index = theme.id;
 
 		//set the next index of list_img_theme
 		//if current index is the first index, then set index = the last index (return to the last image)
@@ -89,7 +89,7 @@ public class GameThemeManagement : MonoBehaviour {
 		//set sprite (image) into btn_theme
 		btn_theme.image.overrideSprite = Resources.Load ("g_theme/" + themeList[index].image, typeof(Sprite)) as Sprite;
 		//set image name into "description"
-		description.text = themeList[index].name;
+		description.text = themeList[index].name_th;
 		//prepare "theme" global variable for sending to other scenes
 		theme = themeList[index];
 	}

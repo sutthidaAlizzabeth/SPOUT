@@ -1,10 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/TextToSpeech.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/ConnectDatabase.cs">
     <Files>
-      <File FileName="Assets/Script/Examples/SpeechRecognizerDemo.cs" Line="238" Column="32" />
-      <File FileName="Assets/Script/TextToSpeech.cs" Line="122" Column="8" />
-      <File FileName="Assets/Script/Examples/TextToSpeechDemo.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/ConnectDatabase.cs" Line="50" Column="6" />
+      <File FileName="Assets/Script/GameThemeManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Character.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Event.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Dialog.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Knowledge.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Vocabulary.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Object/Theme.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameQuizManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameLevelManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameVocabManagement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/GameCharacterManagement.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

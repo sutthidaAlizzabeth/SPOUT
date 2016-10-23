@@ -3,12 +3,16 @@ using System.IO;
 using System.Collections.Generic;
 
 public class Knowledge{
-	public string topic;
+	public string topic_en;
+	public string topic_th;
 	public string image_name;
 	public string content;
 	public string meaning;
 	public string type;
-	public string id;
+	public string pronunciation;
+	public int id;
+	public string example;
+	public string ex_meaning;
 
 	static public Dictionary<int,Knowledge> genKnowledgeList(){
 		//prepare variable
@@ -28,14 +32,14 @@ public class Knowledge{
 			if(json.IndexOf("{") == 0){
 				num = json.IndexOf("}") + 1;
 				k = JsonUtility.FromJson<Knowledge>(json.Substring(0, num));
-				knowledgeList.Add(int.Parse(k.id),k);
+				knowledgeList.Add(k.id,k);
 				json = json.Remove(0, num);
 			}
 			else{
 				json = json.Remove(0, json.IndexOf("{"));
 				num = json.IndexOf("}") + 1;
 				k = JsonUtility.FromJson<Knowledge>(json.Substring(0, num));
-				knowledgeList.Add(int.Parse(k.id),k);
+				knowledgeList.Add(k.id,k);
 				json = json.Remove(0, num);
 			}
 
