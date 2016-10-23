@@ -78,7 +78,7 @@ public class GameQuizManagement : MonoBehaviour {
 
 		//generate all dailog from database
 		Dictionary<int,Dialog> allDialogList = new Dictionary<int, Dialog> ();
-		allDialogList = Dialog.genDialogList ();
+		allDialogList = ConnectDatabase.genDialogList ();//Dialog.genDialogList ();
 
 		//count variable will be a key of allThemeDialog
 		int count = 1;

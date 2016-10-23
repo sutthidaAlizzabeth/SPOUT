@@ -114,7 +114,7 @@ public class GameDialogManagment : MonoBehaviour {
 
 	private void getConversation(){
 		Dictionary<int,Dialog> allDialogList = new Dictionary<int, Dialog> ();
-		allDialogList = Dialog.genDialogList ();
+		allDialogList = ConnectDatabase.genDialogList ();//Dialog.genDialogList ();
 		int count = 1;
 
 		foreach(int key in allDialogList.Keys){

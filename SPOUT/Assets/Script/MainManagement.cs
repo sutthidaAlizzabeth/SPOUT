@@ -14,7 +14,7 @@ public class MainManagement : MonoBehaviour {
 	}
 
 	public void goToGame(){
-		Dictionary<int,Theme> themeList = Theme.genThemeList ();
+		Dictionary<int,Theme> themeList = ConnectDatabase.genThemeList ();//Theme.genThemeList ();
 		GameThemeManagement.theme = themeList [1];
 		SceneManager.LoadScene ("game_theme");
 	}
