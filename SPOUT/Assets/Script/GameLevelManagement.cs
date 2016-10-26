@@ -16,12 +16,6 @@ public class GameLevelManagement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//get game objects from Unity (game_level scene)
-//		thm_name = GameObject.Find ("thm_name").GetComponent (typeof(Text)) as Text;
-//		btn_easy = GameObject.Find("btn_easy").GetComponent(typeof(Button)) as Button;
-//		btn_normal = GameObject.Find("btn_normal").GetComponent(typeof(Button)) as Button;
-//		btn_hard = GameObject.Find("btn_hard").GetComponent(typeof(Button)) as Button;
-
 		//set default button isn't interactive
 		btn_easy.interactable = false;
 		btn_normal.interactable = false;

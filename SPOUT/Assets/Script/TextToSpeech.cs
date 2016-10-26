@@ -45,7 +45,7 @@ public class TextToSpeech: MonoBehaviour {
 
 	// Use this for initialization
 	void Start (){
-		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
+		//dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
 		CheckTTSDataActivity();
 		UpdateSettingsValue();
 	}
@@ -124,14 +124,12 @@ public class TextToSpeech: MonoBehaviour {
 		textToSpeechPlugin.SetLocale (0);
 		textToSpeechPlugin.SetPitch (1.2f);
 		UpdateVolume (15);
-		if(dialog != null){
-			string utteranceId  = "test-utteranceId";
+		string utteranceId  = "test-utteranceId";
 
-			if(textToSpeechPlugin.isInitialized()){
-				UpdateStatus("Trying to speak...");
-				Debug.Log(TAG + "SpeakOut whatToSay: " + message + " utteranceId " + utteranceId);
-				textToSpeechPlugin.SpeakOut(message,utteranceId);	
-			}
+		if(textToSpeechPlugin.isInitialized()){
+			UpdateStatus("Trying to speak...");
+			Debug.Log(TAG + "SpeakOut whatToSay: " + "I love you" + " utteranceId " + utteranceId);
+			textToSpeechPlugin.SpeakOut("I love you",utteranceId);	
 		}
 	}
 
@@ -143,9 +141,9 @@ public class TextToSpeech: MonoBehaviour {
 	private void CheckTTSDataActivity(){
 		if(textToSpeechPlugin!=null){
 			if(textToSpeechPlugin.CheckTTSDataActivity()){
-				dialog.text = "can use";
+				//dialog.text = "can use";
 			}else{
-				dialog.text = "can not use";
+				//dialog.text = "can not use";
 			}
 		}
 	}

@@ -120,7 +120,7 @@ public class TextToSpeechDemo : MonoBehaviour {
 			if(textToSpeechPlugin.isInitialized()){
 				UpdateStatus("Trying to speak...");
 				Debug.Log(TAG + "SpeakOut whatToSay: " + whatToSay  + " utteranceId " + utteranceId);
-				textToSpeechPlugin.SpeakOut(whatToSay,utteranceId);	
+				textToSpeechPlugin.SpeakOut(whatToSay,utteranceId);
 			}
 		}
 	}

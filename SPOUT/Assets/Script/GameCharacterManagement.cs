@@ -18,10 +18,6 @@ public class GameCharacterManagement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//get character button components
-//		npc = GameObject.Find ("npc").GetComponent (typeof(Button)) as Button;
-//		user = GameObject.Find ("user").GetComponent (typeof(Button)) as Button;
-
 		//set default sprite to character button
 		npc.image.overrideSprite = Resources.Load ("g_character/char_1", typeof(Sprite)) as Sprite;
 		user.image.overrideSprite = Resources.Load ("g_character/char_3", typeof(Sprite)) as Sprite;

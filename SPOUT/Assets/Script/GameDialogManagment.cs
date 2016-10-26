@@ -4,14 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameDialogManagment : MonoBehaviour {
-	private SpriteRenderer npc;
-	private SpriteRenderer user;
-	private Text eng;
-	private Text th;
-	private Text btn_next_text;
-	private Button btn_next;
-	private Button btn_speak;
-	private Button btn_stop;
+	public SpriteRenderer npc;
+	public SpriteRenderer user;
+	public Text eng;
+	public Text th;
+	public Text btn_next_text;
+	public Button btn_next;
+	public Button btn_speak;
+	public Button btn_stop;
+	public Canvas Canvas_exit;
+	public Canvas Canvas_option;
 	private int index;
 	private Dictionary<int,Dialog> dialogList;
 
@@ -25,7 +27,7 @@ public class GameDialogManagment : MonoBehaviour {
 
 		//get component
 		eng = GameObject.Find("dialog").GetComponent(typeof(Text)) as Text;
-		th = GameObject.Find ("subtitle").GetComponent (typeof(Text)) as Text;
+		th = GameObject.Find("subtitle").GetComponent (typeof(Text)) as Text;
 		btn_next = GameObject.Find ("btn_next").GetComponent (typeof(Button)) as Button;
 		btn_speak = GameObject.Find ("btn_speak").GetComponent (typeof(Button)) as Button;
 		btn_stop = GameObject.Find ("btn_stop").GetComponent (typeof(Button)) as Button;
@@ -35,12 +37,18 @@ public class GameDialogManagment : MonoBehaviour {
 		dialogList = new Dictionary<int, Dialog>();
 		getConversation ();
 
+		eng.text = dialogList [9].dialog;
+
 		index = 1;
-		next ();
+		//next ();
 
 		//at default, don't show  exit popup
-		Canvas exitCanvas = GameObject.Find ("exit").GetComponent (typeof(Canvas)) as Canvas;
-		exitCanvas.enabled = false;
+		Canvas_exit = GameObject.Find("exit").GetComponent(typeof(Canvas)) as Canvas;
+		Canvas_exit.enabled = false;
+
+		//at default, don't show  option popup
+		Canvas_option = GameObject.Find("Canvas_option").GetComponent(typeof(Canvas)) as Canvas;
+		Canvas_option.enabled = false;
 	}
 
 	public void speak(){
@@ -114,11 +122,11 @@ public class GameDialogManagment : MonoBehaviour {
 
 	private void getConversation(){
 		Dictionary<int,Dialog> allDialogList = new Dictionary<int, Dialog> ();
-		allDialogList = ConnectDatabase.genDialogList ();//Dialog.genDialogList ();
+		allDialogList = ConnectDatabase.genDialogList ();
 		int count = 1;
 
 		foreach(int key in allDialogList.Keys){
-			if (allDialogList [key].event_id.ToString().Equals (GameLevelManagement.level.id)) {
+			if (allDialogList [key].event_id.Equals (GameLevelManagement.level.id)) {
 				dialogList.Add (count, allDialogList [key]);
 				count++;
 			}

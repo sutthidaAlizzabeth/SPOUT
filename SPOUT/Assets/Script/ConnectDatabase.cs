@@ -17,6 +17,9 @@ public class ConnectDatabase : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(GetThemes());
+		//Dictionary<int,Theme> di = new Dictionary<int,Theme> ();
+		//di = ConnectDatabase.genThemeList ();
+		//text.text = "Alizzabeth";
 	}
 
 	IEnumerator GetThemes()

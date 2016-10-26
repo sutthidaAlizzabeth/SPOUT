@@ -29,20 +29,12 @@ public class GameThemeManagement : MonoBehaviour {
 		if (theme == null) {
 			theme = themeList[1];
 		}
-			
-
-		//get game objects from Unity (game_theme scene)
-//		btn_theme = GameObject.Find("btn_theme").GetComponent(typeof(Button)) as Button;
-//		description = GameObject.Find("description").GetComponent(typeof(Text)) as Text;
-//		text_page = GameObject.Find ("text_page").GetComponent (typeof(Text)) as Text;
 
 		//set image of btn_theme, description and text_page
 		setThemeButton (theme.id);
 		setThemePage (theme.id);
 
 		//at first, warning popup don't show
-//		warnningCanvas = GameObject.Find ("warning").GetComponent (typeof(Canvas)) as Canvas;
-//		panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
 		warnningCanvas.enabled = false;
 		panel.enabled = false;
 	}

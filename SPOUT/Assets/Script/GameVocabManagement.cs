@@ -14,7 +14,12 @@ public class GameVocabManagement : MonoBehaviour {
 	public Button btn_vocab_2;
 	public Button btn_vocab_3;
 	public Button btn_vocab_4;
+	public Button btn_speaker_1;
+	public Button btn_speaker_2;
+	public Button btn_speaker_3;
+	public Button btn_speaker_4;
 	private Dictionary<int,Text> btn_text;
+	private Dictionary<int,Button> btn_speaker;
 
 	// Use this for initialization
 	void Start () {
@@ -26,10 +31,6 @@ public class GameVocabManagement : MonoBehaviour {
 		topic.text = "คำศัพท์น่ารู้";
 
 		//get text of vocab components
-//		btn_vocab_1_text = GameObject.Find ("btn_vocab_1_text").GetComponent (typeof(Text)) as Text;
-//		btn_vocab_2_text = GameObject.Find ("btn_vocab_2_text").GetComponent (typeof(Text)) as Text;
-//		btn_vocab_3_text = GameObject.Find ("btn_vocab_3_text").GetComponent (typeof(Text)) as Text;
-//		btn_vocab_4_text = GameObject.Find ("btn_vocab_4_text").GetComponent (typeof(Text)) as Text;
 		btn_vocab_1_text.text = vocabList [1].content + " (" + vocabList[1].type+")";
 		btn_vocab_2_text.text = vocabList [2].content + " (" + vocabList[2].type+")";
 		btn_vocab_3_text.text = vocabList [3].content + " (" + vocabList[3].type+")";
@@ -42,11 +43,12 @@ public class GameVocabManagement : MonoBehaviour {
 		btn_text.Add (3,btn_vocab_3_text);
 		btn_text.Add (4,btn_vocab_4_text);
 
-		//get button components
-//		btn_vocab_1 = GameObject.Find("btn_vocab_1").GetComponent(typeof(Button)) as Button;
-//		btn_vocab_2 = GameObject.Find("btn_vocab_2").GetComponent(typeof(Button)) as Button;
-//		btn_vocab_3 = GameObject.Find("btn_vocab_3").GetComponent(typeof(Button)) as Button;
-//		btn_vocab_4 = GameObject.Find("btn_vocab_4").GetComponent(typeof(Button)) as Button;
+		//collect speaker button
+		btn_speaker = new Dictionary<int, Button>();
+		btn_speaker.Add (1, btn_speaker_1);
+		btn_speaker.Add (2, btn_speaker_2);
+		btn_speaker.Add (3, btn_speaker_3);
+		btn_speaker.Add (4, btn_speaker_4);
 
 		//add click event into button
 		btn_vocab_1.onClick.AddListener (() => clickVocab(vocabList[1],btn_vocab_1_text));
@@ -55,16 +57,30 @@ public class GameVocabManagement : MonoBehaviour {
 		btn_vocab_4.onClick.AddListener (() => clickVocab(vocabList[4],btn_vocab_4_text));
 	}
 
+	//when user click on vocab button
 	public void clickVocab(Knowledge k, Text t){
+		//ถ้าบนปุ่มแสดงคำศัพท์อยู่
 		if (t.text.Equals (k.content+" ("+k.type+")")) {
 			foreach(int id in btn_text.Keys){
 				if (!btn_text[id].text.Equals (k.content+" ("+k.type+")")) {
 					btn_text[id].text = vocabList[id].content + " ("+vocabList[id].type+")";
+					btn_speaker [id].image.color = Color.white;
+					btn_speaker [id].enabled = true;
 				}
 			}
 			t.text = k.meaning;
 		} else {
 			t.text = k.content + " ("+k.type+")";
+		}
+	}
+
+	public void speakerEnable(Button speaker){
+		if (!speaker.enabled) {
+			speaker.image.color = Color.white;
+			speaker.enabled = true;
+		} else {
+			speaker.image.color = Color.clear;
+			speaker.enabled = false;
 		}
 	}
 
