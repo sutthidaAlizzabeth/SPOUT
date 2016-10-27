@@ -45,7 +45,6 @@ public class TextToSpeech: MonoBehaviour {
 
 	// Use this for initialization
 	void Start (){
-		//dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
 		CheckTTSDataActivity();
 		UpdateSettingsValue();
 	}
@@ -115,8 +114,20 @@ public class TextToSpeech: MonoBehaviour {
 	}
 
 	public void readDialog(){
-		message = dialog.text;
-		SpeakOut ();
+		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
+		Text topic = GameObject.Find ("topic").GetComponent (typeof(Text)) as Text;
+		textToSpeechPlugin.SetSpeechRate (0.8f);
+		textToSpeechPlugin.SetLocale (0);
+		textToSpeechPlugin.SetPitch (1.2f);
+		UpdateVolume (15);
+		if(textToSpeechPlugin.isInitialized()){
+			message = dialog.text;
+			topic.text = message;
+			textToSpeechPlugin.SpeakOut(message,"quiz");
+		}
+
+//		message = dialog.text;
+//		SpeakOut ();
 	}
 
 	public void SpeakOut(){
@@ -128,8 +139,8 @@ public class TextToSpeech: MonoBehaviour {
 
 		if(textToSpeechPlugin.isInitialized()){
 			UpdateStatus("Trying to speak...");
-			Debug.Log(TAG + "SpeakOut whatToSay: " + "I love you" + " utteranceId " + utteranceId);
-			textToSpeechPlugin.SpeakOut("I love you",utteranceId);	
+			Debug.Log(TAG + "SpeakOut whatToSay: " + "My name is Bee" + " utteranceId " + utteranceId);
+			textToSpeechPlugin.SpeakOut("My name is Bee",utteranceId);	
 		}
 	}
 
