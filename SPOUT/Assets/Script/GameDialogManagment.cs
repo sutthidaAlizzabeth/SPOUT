@@ -4,11 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameDialogManagment : MonoBehaviour {
-	public SpriteRenderer npc;
-	public SpriteRenderer user;
-	public Text eng;
-	public Text th;
-	public Text btn_next_text;
+	private SpriteRenderer npc;
+	private SpriteRenderer user;
+	public Text dialog;
+	public Text subitle;
 	public Button btn_next;
 	public Button btn_speak;
 	public Button btn_stop;
@@ -26,21 +25,19 @@ public class GameDialogManagment : MonoBehaviour {
 		user.sprite = GameCharacterManagement.selectedUser.image.overrideSprite;
 
 		//get component
-		eng = GameObject.Find("dialog").GetComponent(typeof(Text)) as Text;
-		th = GameObject.Find("subtitle").GetComponent (typeof(Text)) as Text;
+		dialog = GameObject.Find("dialog").GetComponent(typeof(Text)) as Text;
+		subitle = GameObject.Find("subtitle").GetComponent (typeof(Text)) as Text;
 		btn_next = GameObject.Find ("btn_next").GetComponent (typeof(Button)) as Button;
 		btn_speak = GameObject.Find ("btn_speak").GetComponent (typeof(Button)) as Button;
 		btn_stop = GameObject.Find ("btn_stop").GetComponent (typeof(Button)) as Button;
-		btn_next_text = GameObject.Find ("btn_next_text").GetComponent (typeof(Text)) as Text;
 
 		//get all conversation of this event
 		dialogList = new Dictionary<int, Dialog>();
 		getConversation ();
 
-		eng.text = dialogList [9].dialog;
 
 		index = 1;
-		//next ();
+		next ();
 
 		//at default, don't show  exit popup
 		Canvas_exit = GameObject.Find("exit").GetComponent(typeof(Canvas)) as Canvas;
@@ -56,7 +53,7 @@ public class GameDialogManagment : MonoBehaviour {
 		btn_speak.image.color = Color.clear;
 		btn_next.image.color = Color.clear;
 		btn_next.interactable = false;
-		btn_next_text.enabled = false;
+		//btn_next_text.enabled = false;
 		btn_stop.image.color = Color.white;
 		btn_stop.interactable = true;
 		btn_stop.enabled = true;
@@ -67,7 +64,7 @@ public class GameDialogManagment : MonoBehaviour {
 		btn_speak.image.color = Color.clear;
 		btn_next.image.color = Color.white;
 		btn_next.interactable = true;
-		btn_next_text.enabled = true;
+		//btn_next_text.enabled = true;
 		btn_stop.image.color = Color.clear;
 		btn_stop.interactable = false;
 	}
@@ -80,18 +77,18 @@ public class GameDialogManagment : MonoBehaviour {
 			btn_stop.interactable = false;
 			btn_next.enabled = true;
 			btn_next.interactable = true;
-			btn_next_text.enabled = true;
+			//btn_next_text.enabled = true;
 			npc.enabled = true;
 			user.enabled = false;
 
 			if (npc.sprite.name.Contains ("1") || npc.sprite.name.Contains ("2")) {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
-				th.text = th.text.Replace("คะ","ครับ");
-				th.text = th.text.Replace ("ฉัน","ผม");
+				dialog.text = dialogList [index].dialog;
+				subitle.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
+				subitle.text = subitle.text.Replace("คะ","ครับ");
+				subitle.text = subitle.text.Replace ("ฉัน","ผม");
 			} else {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning;
+				dialog.text = dialogList [index].dialog;
+				subitle.text = dialogList [index].meaning;
 			}
 
 			index++;
@@ -102,18 +99,18 @@ public class GameDialogManagment : MonoBehaviour {
 			btn_stop.image.color = Color.clear;
 			btn_next.image.color = Color.clear;
 			btn_next.interactable = false;
-			btn_next_text.enabled = false;
+			//btn_next_text.enabled = false;
 			npc.enabled = false;
 			user.enabled = true;
 
 			if (user.sprite.name.Contains ("1") || user.sprite.name.Contains ("2")) {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
-				th.text = th.text.Replace("คะ","ครับ");
-				th.text = th.text.Replace ("ฉัน","ผม");
+				dialog.text = dialogList [index].dialog;
+				subitle.text = dialogList [index].meaning.Replace("ค่ะ","ครับ");
+				subitle.text = subitle.text.Replace("คะ","ครับ");
+				subitle.text = subitle.text.Replace ("ฉัน","ผม");
 			} else {
-				eng.text = dialogList [index].dialog;
-				th.text = dialogList [index].meaning;
+				dialog.text = dialogList [index].dialog;
+				subitle.text = dialogList [index].meaning;
 			}
 
 			index++;

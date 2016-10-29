@@ -113,7 +113,7 @@ public class TextToSpeech: MonoBehaviour {
 		}
 	}
 
-	public void readDialog(){
+	public void readQuiz(){
 		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
 		Text topic = GameObject.Find ("topic").GetComponent (typeof(Text)) as Text;
 		textToSpeechPlugin.SetSpeechRate (0.8f);
