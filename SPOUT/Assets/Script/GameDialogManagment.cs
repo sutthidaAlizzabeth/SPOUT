@@ -6,13 +6,14 @@ using System.Collections.Generic;
 public class GameDialogManagment : MonoBehaviour {
 	private SpriteRenderer npc;
 	private SpriteRenderer user;
-	public Text dialog;
-	public Text subitle;
-	public Button btn_next;
-	public Button btn_speak;
-	public Button btn_stop;
-	public Canvas Canvas_exit;
-	public Canvas Canvas_option;
+	private Text dialog;
+	private Text subitle;
+	private Button btn_next;
+	private Text btn_next_text;
+	private Button btn_speak;
+	private Button btn_stop;
+	private Canvas Canvas_exit;
+	private Canvas Canvas_option;
 	private int index;
 	private Dictionary<int,Dialog> dialogList;
 
@@ -28,6 +29,7 @@ public class GameDialogManagment : MonoBehaviour {
 		dialog = GameObject.Find("dialog").GetComponent(typeof(Text)) as Text;
 		subitle = GameObject.Find("subtitle").GetComponent (typeof(Text)) as Text;
 		btn_next = GameObject.Find ("btn_next").GetComponent (typeof(Button)) as Button;
+		btn_next_text = GameObject.Find ("btn_next_text").GetComponent (typeof(Text)) as Text;
 		btn_speak = GameObject.Find ("btn_speak").GetComponent (typeof(Button)) as Button;
 		btn_stop = GameObject.Find ("btn_stop").GetComponent (typeof(Button)) as Button;
 
@@ -49,35 +51,43 @@ public class GameDialogManagment : MonoBehaviour {
 	}
 
 	public void speak(){
-		btn_speak.interactable = false;
-		btn_speak.image.color = Color.clear;
-		btn_next.image.color = Color.clear;
-		btn_next.interactable = false;
-		//btn_next_text.enabled = false;
 		btn_stop.image.color = Color.white;
 		btn_stop.interactable = true;
 		btn_stop.enabled = true;
+		btn_speak.image.color = Color.clear;
+		btn_speak.interactable = false;
+		btn_speak.enabled = false;
+		btn_next.image.color = Color.clear;
+		btn_next.interactable = false;
+		btn_next.enabled = false;
+		btn_next_text.enabled = false;
 	}
 
 	public void stop(){
-		btn_speak.interactable = false;
 		btn_speak.image.color = Color.clear;
+		btn_speak.interactable = false;
+		btn_speak.enabled = false;
 		btn_next.image.color = Color.white;
 		btn_next.interactable = true;
-		//btn_next_text.enabled = true;
+		btn_next.enabled = true;
+		btn_next_text.enabled = true;
 		btn_stop.image.color = Color.clear;
 		btn_stop.interactable = false;
+		btn_stop.enabled = false;
 	}
 
 	public void next(){
 		if (dialogList[index].person == 1) {
 			btn_speak.image.color = Color.clear;
 			btn_speak.interactable = false;
+			btn_speak.enabled = false;
 			btn_stop.image.color = Color.clear;
 			btn_stop.interactable = false;
+			btn_stop.enabled = false;
+			btn_next.image.color = Color.white;
 			btn_next.enabled = true;
 			btn_next.interactable = true;
-			//btn_next_text.enabled = true;
+			btn_next_text.enabled = true;
 			npc.enabled = true;
 			user.enabled = false;
 
@@ -95,11 +105,14 @@ public class GameDialogManagment : MonoBehaviour {
 		} else {
 			btn_speak.image.color = Color.white;
 			btn_speak.interactable = true;
-			btn_speak.interactable = false;
+			btn_speak.enabled = true;
 			btn_stop.image.color = Color.clear;
+			btn_stop.interactable = false;
+			btn_stop.enabled = false;
 			btn_next.image.color = Color.clear;
 			btn_next.interactable = false;
-			//btn_next_text.enabled = false;
+			btn_next.enabled = false;
+			btn_next_text.enabled = false;
 			npc.enabled = false;
 			user.enabled = true;
 

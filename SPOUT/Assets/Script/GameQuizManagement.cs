@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GameQuizManagement : MonoBehaviour {
+	private Canvas canvas_main;
 	private Canvas popup_correct;
 	private Canvas popup_wrong;
 	private Image panel;
@@ -18,6 +19,7 @@ public class GameQuizManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//get component from unity (game_quiz scene)
+		canvas_main = GameObject.Find ("Canvas").GetComponent (typeof(Canvas)) as Canvas;
 		popup_correct = GameObject.Find ("popup_correct").GetComponent (typeof(Canvas)) as Canvas;
 		popup_wrong = GameObject.Find ("popup_wrong").GetComponent (typeof(Canvas)) as Canvas;
 		panel = GameObject.Find ("Panel").GetComponent (typeof(Image)) as Image;
@@ -62,10 +64,17 @@ public class GameQuizManagement : MonoBehaviour {
 				
 			countQuiz++;
 
+//			GameObject canvas_main = new GameObject ("canvas_main");
+//			canvas_main.transform.SetParent (this.transform);
+//
+//			Text test1 = canvas_main.gameObject.AddComponent<Text> ();
+//			test1.text = "Yahhhhh!!!";
+
 			//show question (dialog) and then remove it
-			randomDialog = allThemeDialog [randomKey].dialog;
-			allThemeDialog.Remove (randomKey);
-			dialog.text = randomDialog;
+//			randomDialog = allThemeDialog [randomKey].dialog;
+//			allThemeDialog.Remove (randomKey);
+//			dialog.text = randomDialog;
+
 		} else {
 			//if user finish 10 dialogs testing, load a result scene 
 			SceneManager.LoadScene ("game_quiz_total");

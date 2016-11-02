@@ -6,20 +6,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ConnectDatabase : MonoBehaviour {
-
 	static public string jsonThemes;
 	static public string jsonVocabularies;
 	static public string jsonEvents;
 	static public string jsonKnowledge;
+	static public string jsonCategory;
 	static public string jsonDialog;
 	static public string jsonCharacters;
 
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(GetThemes());
-		//Dictionary<int,Theme> di = new Dictionary<int,Theme> ();
-		//di = ConnectDatabase.genThemeList ();
-		//text.text = "Alizzabeth";
 	}
 
 	IEnumerator GetThemes()
@@ -42,6 +39,8 @@ public class ConnectDatabase : MonoBehaviour {
 			jsonEvents = temp.Substring (temp.IndexOf ("[")+1, temp.IndexOf ("]")-4);
 			temp = temp.Remove (0, temp.IndexOf("]")+1);
 			jsonKnowledge = temp.Substring (temp.IndexOf ("[")+1, temp.IndexOf ("]")-4);
+			temp = temp.Remove (0, temp.IndexOf("]")+1);
+			jsonCategory = temp.Substring (temp.IndexOf ("[")+1, temp.IndexOf ("]")-4);
 			temp = temp.Remove (0, temp.IndexOf("]")+1);
 			jsonDialog = temp.Substring (temp.IndexOf ("[")+1, temp.IndexOf ("]")-4);
 			temp = temp.Remove (0, temp.IndexOf("]")+1);
@@ -173,6 +172,37 @@ public class ConnectDatabase : MonoBehaviour {
 		while(num != -1);
 
 		return knowledgeList;
+	}
+
+	static public Dictionary<int,Category> genCategoryList(){
+		string json = jsonCategory;
+		//prepare variable
+		Dictionary<int, Category> categoryList = new Dictionary<int, Category>();
+		Category c = null;
+		int num = 0;
+
+		//split string object to arraylist
+		do{
+			if(json.IndexOf("{") == 0){
+				num = json.IndexOf("}") + 1;
+				c = JsonUtility.FromJson<Category>(json.Substring(0, num));
+				categoryList.Add(c.category_id,c);
+				json = json.Remove(0, num);
+			}
+			else{
+				json = json.Remove(0, json.IndexOf("{"));
+				num = json.IndexOf("}") + 1;
+				c = JsonUtility.FromJson<Category>(json.Substring(0, num));
+				categoryList.Add(c.category_id,c);
+				json = json.Remove(0, num);
+			}
+
+			//check next string object
+			num = json.IndexOf("{");
+		}
+		while(num != -1);
+
+		return categoryList;
 	}
 
 	static public Dictionary<int,Dialog> genDialogList(){

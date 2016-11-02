@@ -9,6 +9,7 @@ public class TextToSpeech: MonoBehaviour {
 
 	private Text dialog;
 	private string message;
+	static public int utteranceId;
 
 	public Text statusText;
 	public Text ttsDataActivityStatusText;
@@ -114,35 +115,67 @@ public class TextToSpeech: MonoBehaviour {
 	}
 
 	public void readQuiz(){
-		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
-		Text topic = GameObject.Find ("topic").GetComponent (typeof(Text)) as Text;
-		textToSpeechPlugin.SetSpeechRate (0.8f);
-		textToSpeechPlugin.SetLocale (0);
-		textToSpeechPlugin.SetPitch (1.2f);
-		UpdateVolume (15);
-		if(textToSpeechPlugin.isInitialized()){
-			message = dialog.text;
-			topic.text = message;
-			textToSpeechPlugin.SpeakOut(message,"quiz");
+		OnApplicationPause (false);
+		if (utteranceId == null) {
+			utteranceId = 1;
 		}
+		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
+		//Text topic = GameObject.Find ("topic").GetComponent (typeof(Text)) as Text;
+		textToSpeechPlugin.SetSpeechRate (0.8f);
+		textToSpeechPlugin.SetLocale (SpeechLocale.US);
+		textToSpeechPlugin.SetPitch (1.0f);
+		UpdateVolume (15);
+		if (textToSpeechPlugin.CheckTTSDataActivity() && textToSpeechPlugin.isInitialized()) {
+			message = dialog.text;
+			textToSpeechPlugin.SpeakOut(message,utteranceId.ToString());
+			utteranceId++;
+			OnApplicationPause (true);
+		} else {
+			dialog.text = "it can not use TToTT";
+		}
+//		if(textToSpeechPlugin.isInitialized()){
+//			message = dialog.text;
+//			//topic.text = message;
+//			textToSpeechPlugin.SpeakOut(message,"quiz");
+//		}
 
 //		message = dialog.text;
 //		SpeakOut ();
 	}
 
-	public void SpeakOut(){
-		textToSpeechPlugin.SetSpeechRate (0.8f);
-		textToSpeechPlugin.SetLocale (0);
-		textToSpeechPlugin.SetPitch (1.2f);
-		UpdateVolume (15);
-		string utteranceId  = "test-utteranceId";
+//	public void readDialog(){
+//		dialog = GameObject.Find ("dialog").GetComponent (typeof(Text)) as Text;
+//		Text subitle = GameObject.Find("subtitle").GetComponent (typeof(Text)) as Text;
+//		textToSpeechPlugin.SetSpeechRate (0.8f);
+//		textToSpeechPlugin.SetLocale (0);
+//		textToSpeechPlugin.SetPitch (1.0f);
+//		UpdateVolume (15);
+//		if (textToSpeechPlugin.CheckTTSDataActivity () && textToSpeechPlugin.isInitialized ()) {
+//			message = dialog.text;
+//			subitle.text = message;
+//			textToSpeechPlugin.SpeakOut (message,"dialog");
+//		} else {
+//			subitle.text = "it can not use TToTT";
+//		}
+////		if (textToSpeechPlugin.isInitialized ()) {
+////			subitle.text = message;
+////			textToSpeechPlugin.SpeakOut (message,"dialog");
+////		}
+//	}
 
-		if(textToSpeechPlugin.isInitialized()){
-			UpdateStatus("Trying to speak...");
-			Debug.Log(TAG + "SpeakOut whatToSay: " + "My name is Bee" + " utteranceId " + utteranceId);
-			textToSpeechPlugin.SpeakOut("My name is Bee",utteranceId);	
-		}
-	}
+//	public void SpeakOut(){
+//		textToSpeechPlugin.SetSpeechRate (0.8f);
+//		textToSpeechPlugin.SetLocale (0);
+//		textToSpeechPlugin.SetPitch (1.2f);
+//		UpdateVolume (15);
+//		string utteranceId  = "test-utteranceId";
+//
+//		if(textToSpeechPlugin.isInitialized()){
+//			UpdateStatus("Trying to speak...");
+//			Debug.Log(TAG + "SpeakOut whatToSay: " + "My name is Bee" + " utteranceId " + utteranceId);
+//			textToSpeechPlugin.SpeakOut("My name is Bee",utteranceId);	
+//		}
+//	}
 
 	//checks if speaking
 	public bool IsSpeaking(){
@@ -174,7 +207,7 @@ public class TextToSpeech: MonoBehaviour {
 			textToSpeechPlugin.SetLocaleByCountry(countryISO2Alpha);
 			Debug.Log(TAG + "locale set," + ttsLocaleCountry.ToString() + "locale is available");
 
-			SpeakOut();
+			//SpeakOut();
 		}else{
 			Debug.Log(TAG + "locale not set," + ttsLocaleCountry.ToString() + "locale is  notavailable");
 		}

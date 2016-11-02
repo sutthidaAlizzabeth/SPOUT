@@ -69,6 +69,8 @@
      <Compile Include="Assets\Script\GoGameLevel.cs" />
      <Compile Include="Assets\Script\Helpers\HideShowGameObject.cs" />
      <Compile Include="Assets\Script\Helpers\SpeechLocaleHelper.cs" />
+     <Compile Include="Assets\Script\KnCategoryManagement.cs" />
+     <Compile Include="Assets\Script\KnContentManagement.cs" />
      <Compile Include="Assets\Script\LayOut.cs" />
      <Compile Include="Assets\Script\Main\AUPHolder.cs" />
      <Compile Include="Assets\Script\Main\DemoController.cs" />
@@ -77,6 +79,7 @@
      <Compile Include="Assets\Script\Main\Utils.cs" />
      <Compile Include="Assets\Script\Main\UtilsPlugin.cs" />
      <Compile Include="Assets\Script\MainManagement.cs" />
+     <Compile Include="Assets\Script\Object\Category.cs" />
      <Compile Include="Assets\Script\Object\Character.cs" />
      <Compile Include="Assets\Script\Object\Dialog.cs" />
      <Compile Include="Assets\Script\Object\Event.cs" />
@@ -88,6 +91,7 @@
      <Compile Include="Assets\Script\Sound.cs" />
      <Compile Include="Assets\Script\SpeechToText.cs" />
      <Compile Include="Assets\Script\TextToSpeech.cs" />
+     <Compile Include="Assets\Script\test.cs" />
      <None Include="Assets\SpeechTTS\MetaData.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\Asset Description.txt" />
