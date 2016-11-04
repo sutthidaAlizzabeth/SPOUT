@@ -1,12 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/TextToSpeech.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/KnContentManagement.cs">
     <Files>
-      <File FileName="Assets/Script/TextToSpeech.cs" Line="156" Column="6" />
-      <File FileName="Assets/Script/GameQuizManagement.cs" Line="65" Column="16" />
-      <File FileName="Assets/Script/GameDialogManagment.cs" Line="138" Column="3" />
-      <File FileName="Assets/Script/GameVocabManagement.cs" Line="90" Column="84" />
-      <File FileName="Assets/Script/KnCategoryManagement.cs" Line="25" Column="2" />
+      <File FileName="Assets/Script/KnCategoryManagement.cs" Line="26" Column="23" />
+      <File FileName="Assets/Script/KnContentManagement.cs" Line="48" Column="76" />
+      <File FileName="Assets/Script/test.cs" Line="15" Column="46" />
+      <File FileName="Assets/Script/GameVocabManagement.cs" Line="54" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -17,9 +17,9 @@ public class GameLevelManagement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//set default button isn't interactive
-		btn_easy.interactable = false;
-		btn_normal.interactable = false;
-		btn_hard.interactable = false;
+		btn_easy.enabled = false;
+		btn_normal.enabled = false;
+		btn_hard.enabled = false;
 
 		levelList.Clear ();
 
@@ -33,11 +33,11 @@ public class GameLevelManagement : MonoBehaviour {
 			//set interaction of button
 			foreach (int id in levelList.Keys) {
 				if (levelList [id].level_en.Equals ("easy")) {
-					btn_easy.interactable = true;
+					btn_easy.enabled = true;
 				} else if (levelList [id].level_en.Equals ("normal")) {
-					btn_normal.interactable = true;
+					btn_normal.enabled = true;
 				} else {
-					btn_hard.interactable = true;
+					btn_hard.enabled = true;
 				}
 			}
 
