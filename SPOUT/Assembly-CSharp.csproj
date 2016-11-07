@@ -50,6 +50,7 @@
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\Config.cs" />
      <Compile Include="Assets\Script\ConnectDatabase.cs" />
+     <Compile Include="Assets\Script\DialogSpeechRecognizer.cs" />
      <Compile Include="Assets\Script\Enum\EnumExtentions.cs" />
      <Compile Include="Assets\Script\Enum\SpeechExtraLocale.cs" />
      <Compile Include="Assets\Script\Enum\SpeechLocale.cs" />
@@ -62,7 +63,7 @@
      <Compile Include="Assets\Script\GameCharacterManagement.cs" />
      <Compile Include="Assets\Script\GameDialogManagment.cs" />
      <Compile Include="Assets\Script\GameLevelManagement.cs" />
-     <Compile Include="Assets\Script\GameQuizManagement.cs" />
+     <Compile Include="Assets\Script\GameQuizeeeManagement.cs" />
      <Compile Include="Assets\Script\GameThemeManagement.cs" />
      <Compile Include="Assets\Script\GameVocabManagement.cs" />
      <Compile Include="Assets\Script\GoBack.cs" />
@@ -88,6 +89,8 @@
      <Compile Include="Assets\Script\Object\Theme.cs" />
      <Compile Include="Assets\Script\Object\Vocabulary.cs" />
      <Compile Include="Assets\Script\Popup.cs" />
+     <Compile Include="Assets\Script\QuizManagement.cs" />
+     <Compile Include="Assets\Script\QuizSpeechRecognizer.cs" />
      <Compile Include="Assets\Script\Sound.cs" />
      <Compile Include="Assets\Script\SpeechToText.cs" />
      <Compile Include="Assets\Script\TextToSpeech.cs" />

@@ -12,7 +12,7 @@ public class SpeechRecognizerDemo : MonoBehaviour {
 	private bool hasInit = false;
 	public Text resultText;
 	public Text partialResultText;
-	public Text statusText;
+//	public Text statusText;
 
 	private TextToSpeechPlugin textToSpeechPlugin;
 
@@ -201,11 +201,11 @@ public class SpeechRecognizerDemo : MonoBehaviour {
 		textToSpeechPlugin.ShutDownTextToSpeechService();
 	}
 
-	private void UpdateStatus(string status){
-		if(statusText!=null){
-			statusText.text = String.Format("Status: {0}",status);	
-		}
-	}
+//	private void UpdateStatus(string status){
+//		if(statusText!=null){
+//			statusText.text = String.Format("Status: {0}",status);	
+//		}
+//	}
 
 	//SpeechRecognizer Events
 	private void onReadyForSpeech(string data){
@@ -214,20 +214,20 @@ public class SpeechRecognizerDemo : MonoBehaviour {
 			speechPlugin.EnableModal(false);	
 		}
 
-		UpdateStatus(data.ToString());
+//		UpdateStatus(data.ToString());
 	}
 
 	private void onBeginningOfSpeech(string data){
-		UpdateStatus(data.ToString());
+//		UpdateStatus(data.ToString());
 	}
 
 	private void onEndOfSpeech(string data){
-		UpdateStatus(data.ToString());
+//		UpdateStatus(data.ToString());
 	}
 
 	private void onError(int data){
 		SpeechRecognizerError error = (SpeechRecognizerError)data;
-		UpdateStatus(error.ToString());
+//		UpdateStatus(error.ToString());
 		//statusText.text =  String.Format("Status: {0}",error.ToString());
 
 		if(resultText!=null){

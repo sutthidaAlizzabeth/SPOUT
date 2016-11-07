@@ -220,9 +220,6 @@ public class TextToSpeechDemo : MonoBehaviour {
 		if(status == 1){
 			UpdateStatus("init speech service successful!");
 
-			//get available locale on android device
-			//textToSpeechPlugin.GetAvailableLocale();
-
 			UpdateLocale(SpeechLocale.US);
 			UpdatePitch(1f);
 			UpdateSpeechRate(1f);

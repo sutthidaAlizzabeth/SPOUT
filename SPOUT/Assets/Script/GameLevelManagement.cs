@@ -33,10 +33,13 @@ public class GameLevelManagement : MonoBehaviour {
 			//set interaction of button
 			foreach (int id in levelList.Keys) {
 				if (levelList [id].level_en.Equals ("easy")) {
+					btn_easy.image.overrideSprite = Resources.Load ("g_level/btn_easy", typeof(Sprite)) as Sprite;
 					btn_easy.enabled = true;
 				} else if (levelList [id].level_en.Equals ("normal")) {
+					btn_normal.image.overrideSprite = Resources.Load ("g_level/btn_normal", typeof(Sprite)) as Sprite;
 					btn_normal.enabled = true;
 				} else {
+					btn_hard.image.overrideSprite = Resources.Load ("g_level/btn_hard", typeof(Sprite)) as Sprite;
 					btn_hard.enabled = true;
 				}
 			}

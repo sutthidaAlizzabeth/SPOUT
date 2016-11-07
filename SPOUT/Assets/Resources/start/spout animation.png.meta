@@ -1,0 +1,1198 @@
+fileFormatVersion: 2
+guid: 5acbf54da0a769246bb3b919a974e7a6
+timeCreated: 1478460272
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spout animation_0
+    21300002: spout animation_1
+    21300004: spout animation_2
+    21300006: spout animation_3
+    21300008: spout animation_4
+    21300010: spout animation_5
+    21300012: spout animation_6
+    21300014: spout animation_7
+    21300016: spout animation_8
+    21300018: spout animation_9
+    21300020: spout animation_10
+    21300022: spout animation_11
+    21300024: spout animation_12
+    21300026: spout animation_13
+    21300028: spout animation_14
+    21300030: spout animation_15
+    21300032: spout animation_16
+    21300034: spout animation_17
+    21300036: spout animation_18
+    21300038: spout animation_19
+    21300040: spout animation_20
+    21300042: spout animation_21
+    21300044: spout animation_22
+    21300046: spout animation_23
+    21300048: spout animation_24
+    21300050: spout animation_25
+    21300052: spout animation_26
+    21300054: spout animation_27
+    21300056: spout animation_28
+    21300058: spout animation_29
+    21300060: spout animation_30
+    21300062: spout animation_31
+    21300064: spout animation_32
+    21300066: spout animation_33
+    21300068: spout animation_34
+    21300070: spout animation_35
+    21300072: spout animation_36
+    21300074: spout animation_37
+    21300076: spout animation_38
+    21300078: spout animation_39
+    21300080: spout animation_40
+    21300082: spout animation_41
+    21300084: spout animation_42
+    21300086: spout animation_43
+    21300088: spout animation_44
+    21300090: spout animation_45
+    21300092: spout animation_46
+    21300094: spout animation_47
+    21300096: spout animation_48
+    21300098: spout animation_49
+    21300100: spout animation_50
+    21300102: spout animation_51
+    21300104: spout animation_52
+    21300106: spout animation_53
+    21300108: spout animation_54
+    21300110: spout animation_55
+    21300112: spout animation_56
+    21300114: spout animation_57
+    21300116: spout animation_58
+    21300118: spout animation_59
+    21300120: spout animation_60
+    21300122: spout animation_61
+    21300124: spout animation_62
+    21300126: spout animation_63
+    21300128: spout animation_64
+    21300130: spout animation_65
+    21300132: spout animation_66
+    21300134: spout animation_67
+    21300136: spout animation_68
+    21300138: spout animation_69
+    21300140: spout animation_70
+    21300142: spout animation_71
+    21300144: spout animation_72
+    21300146: spout animation_73
+    21300148: spout animation_74
+    21300150: spout animation_75
+    21300152: spout animation_76
+    21300154: spout animation_77
+    21300156: spout animation_78
+    21300158: spout animation_79
+    21300160: spout animation_80
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spout animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_3
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_4
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_5
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_6
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_7
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_8
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_9
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_10
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_11
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_12
+      rect:
+        serializedVersion: 2
+        x: 12960
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_13
+      rect:
+        serializedVersion: 2
+        x: 14040
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_14
+      rect:
+        serializedVersion: 2
+        x: 15120
+        y: 14464
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_16
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_17
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_18
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_19
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_20
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_21
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_22
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_23
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_24
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_25
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_26
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_27
+      rect:
+        serializedVersion: 2
+        x: 12960
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_28
+      rect:
+        serializedVersion: 2
+        x: 14040
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_29
+      rect:
+        serializedVersion: 2
+        x: 15120
+        y: 12544
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_31
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_32
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_33
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_34
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_35
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_36
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_37
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_38
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_39
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_40
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_41
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_42
+      rect:
+        serializedVersion: 2
+        x: 12960
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_43
+      rect:
+        serializedVersion: 2
+        x: 14040
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_44
+      rect:
+        serializedVersion: 2
+        x: 15120
+        y: 10624
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_46
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_47
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_48
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_49
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_50
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_51
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_52
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_53
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_54
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_55
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_56
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_57
+      rect:
+        serializedVersion: 2
+        x: 12960
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_58
+      rect:
+        serializedVersion: 2
+        x: 14040
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_59
+      rect:
+        serializedVersion: 2
+        x: 15120
+        y: 8704
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_61
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_62
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_63
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_64
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_65
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_66
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_67
+      rect:
+        serializedVersion: 2
+        x: 7560
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_68
+      rect:
+        serializedVersion: 2
+        x: 8640
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_69
+      rect:
+        serializedVersion: 2
+        x: 9720
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_70
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_71
+      rect:
+        serializedVersion: 2
+        x: 11880
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_72
+      rect:
+        serializedVersion: 2
+        x: 12960
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_73
+      rect:
+        serializedVersion: 2
+        x: 14040
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_74
+      rect:
+        serializedVersion: 2
+        x: 15120
+        y: 6784
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_76
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_77
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_78
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_79
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spout animation_80
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 4864
+        width: 1080
+        height: 1920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

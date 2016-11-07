@@ -14,6 +14,8 @@ public class ConnectDatabase : MonoBehaviour {
 	static public string jsonDialog;
 	static public string jsonCharacters;
 
+	private Text dialog;
+
 	// Use this for initialization
 	void Start () {
 		StartCoroutine(GetThemes());
@@ -22,7 +24,7 @@ public class ConnectDatabase : MonoBehaviour {
 	IEnumerator GetThemes()
 	{
 		//  run the php file
-		WWW webRequest = new WWW("http://spout.hosting.itkmutt19.in.th/RetrieveData.php");//localhost ("http://localhost/spout/RetrieveData.php");
+		WWW webRequest = new WWW("http://spout.hosting.itkmutt19.in.th/RetrieveData.php");
 
 		// wait for the feedback of the command
 		yield return webRequest;
@@ -265,7 +267,7 @@ public class ConnectDatabase : MonoBehaviour {
 		return characterList;
 	}
 
-	public void goToMainmenu(){
+	private void goToMainmenu(){
 		SceneManager.LoadScene ("main");
 	}
 }

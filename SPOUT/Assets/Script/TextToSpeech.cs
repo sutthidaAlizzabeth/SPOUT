@@ -213,7 +213,7 @@ public class TextToSpeech: MonoBehaviour {
 		}
 	}
 
-	private void OnDestroy(){
+	public void OnDestroy(){
 		//call this of your not going to used TextToSpeech Service anymore
 		textToSpeechPlugin.ShutDownTextToSpeechService();
 	}
